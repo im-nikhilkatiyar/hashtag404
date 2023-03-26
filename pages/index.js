@@ -1,16 +1,6 @@
+import Footer from '@/component/footer';
 import Head from 'next/head';
-// import Hashtaghome from "../components/hashtaghome";
-// import '../styles/404.css';
-
 import Hashtaghome2 from "../components/hashtaghome2";
-// import { Container } from '@mui/system';
-
-// import Container from '../components/container';
-// import Bluebar from '../components/Bluebar';
-// import Interested from '../components/Interested';
-// import Header from '../components/header';
-// import Navbar from '../components/navbar';
-
 export default function Home() {
   return (
     <div>
@@ -25,20 +15,8 @@ export default function Home() {
       {/* <LandingPageContainer /> */}
 
       {/* <Arr /> */}
-     
-   
-
-      {/* <Hashtaghome/> */}
       <Hashtaghome2/>
-      {/* <Navbar/> */}
-
-{/* >>>>>>>>>>   Responsive     >>>>>>>> */}
-      
-        {/* <Header/> */}
-      {/* <Interested/> */}
-      {/* <Bluebar/> */}
-      {/* <Container/> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
