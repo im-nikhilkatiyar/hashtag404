@@ -7,6 +7,8 @@ import Head from 'next/head';
 import Footer from '../src/component/footerfinal';
 import Carousel from '../src/component/carousel';
 import Column from '../src/component/threeColumn';
+
+import Arr from '../src/component/arr';
 // import LandingPageContainer from '../src/layouts/LandingPage/LandingPageContainer'
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
       {/* <Carousel/> */}
       {/* <Column /> */}
       {/* <LandingPageContainer /> */}
+
+      {/* <Arr /> */}
      
     </div>
   );

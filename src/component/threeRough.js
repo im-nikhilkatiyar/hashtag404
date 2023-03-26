@@ -11,19 +11,17 @@ const useStyles = makeStyles((theme) =>({
             marginTop: '150px',
             height: '500px',
             paddingTop: '5px',
-
-            '@media screen and (max-width:1504px)':{
+                '@media screen and (max-width:1400px)':{
             
-                height: '300px',
-                width:'auto',
-                // flexDirection :'column',
-                    
-                },
-    
+            height: '300px',
+            width:'auto',
+            // flexDirection :'column',
+                
+            },
+
             '@media screen and (max-width:950px)':{
                 height:'400px',
-                   
-                },
+            },
         },
 
         projectContainer:{
@@ -35,25 +33,22 @@ const useStyles = makeStyles((theme) =>({
                 // paddingTop: '40px',
                 marginTop: '-5rem',
                 width:'1444px',
-                
-                '@media screen and (max-width:1504px)': {
+                    // paddingLeft: '150px',
+                '@media screen and (max-width:1400px)': {
                 
                 height: '166px',
-            
-                width:'auto',
+                width:'1344px',
                 // paddingTop:'40px',
-                marginLeft:'30px',
-                marginRight:'30px',
+                marginLeft:'10px',
+                marginRight:'9px',
                 
                 },
 
                 '@media screen and (max-width:915px)':{
-                marginLeft:'80px',
-                marginRight:'20px',
-                height:'300px',
-                width:'720px',
-                // paddingLeft:'10px',       
-               
+                marginLeft:'30px',
+                marginRight:'30px',
+                height:'330px',
+                paddingLeft:'10px',       
                 },
                     
         },
@@ -69,21 +64,20 @@ const useStyles = makeStyles((theme) =>({
                 letterSpacing: '1px',
                 height:'78px',
                 width:'1328',
-                '@media screen and (max-width:1504px)':{
+                '@media screen and (max-width:1782px)':{
                 // [theme.breakpoints.down( "sm", "md", "lg")]: {
-                    height:'78px',
-                    width:'1328',
-                    margin:'-12px',
-                   
+                       
+                // display:'none',
+                // paddingTop:'70px',
+                // paddingRight:'2px',
+                padding:'56px 20px',
+                // paddingRight:'2px',
+                // marginLeft:'1px',
                 
                 },
                 '@media screen and (max-width:915px)':{
                 flexDirection:'column', 
                 alignItems:'center',
-                paddingTop:'20px',
-                height:'250px',
-                    width:'780px',
-                    padding:'0px',
                     
                 },
          },
@@ -95,36 +89,16 @@ const useStyles = makeStyles((theme) =>({
                 whiteSpace: 'normal',
                 width:'443px',
                 height:'60px',
-                       
-                '@media screen and (max-width:1504px)':{
-                
+                // justifyContent:'center',
+
+                        
+                '@media screen and (max-width:1782px)':{
+                fontSize:'10px',
+                paddingLeft:'6px',
                 whiteSpace: 'pre',
-                fontSize:'28px',
-                width:'463px',
-                    height:'60px',
-                '@media screen and (max-width:915px)':{
-                    marginBottom:'10px',
-                    width:'463px',
-                    height:'60px',
-                },
                 
                 },
         },
-
-        // headingStyle:{
-            
-
-        //     '@media screen and (max-width:1504px)':{
-        //         paddingLeft:'20px',
-        //         width:'418px',
-        //         height:'36px',
-        //     },
-        //     '@media screen and (max-width:915px)':{
-        //         paddingLeft:'20px',
-        //         width:'418px',
-        //         height:'36px',
-        //     },
-        // },
 
         coltwoContainer:{
                         
@@ -138,19 +112,16 @@ const useStyles = makeStyles((theme) =>({
                 height:'78px',
                 padding:'12px',
 
-                '@media screen and (max-width:1504px)':{
+                '@media screen and (max-width:1110px)':{
                 fontSize:'15px',
-                
+                paddingLeft:'4px',
                 whiteSpace: 'normal',
-                
+                marginLeft:'40px',
                 // paddingLeft:'20px'                
                 },
 
                 '@media screen and (max-width:915px)':{
-                    
-                        marginBottom:'10px',
-                        width:'683px',
-                        height:'60px',
+                    marginTop:'25px',
                     whiteSpace: 'normal',
                 },
         },
@@ -166,15 +137,14 @@ const useStyles = makeStyles((theme) =>({
                 
                 // padding: '18px 30px',
 
-                // '@media screen and (max-width:1504px)':{
-                // },
+                '@media screen and (max-width:1112px)':{
+                    paddingLeft:'3px',
+                    marginLeft:'70px',
+                    width:'200px'
+                },
 
                 '@media screen and (max-width:915px)':{
-                   
-                        marginBottom:'10px',
-                        width:'443px',
-                        height:'60px',
-                    
+                    marginTop:'40px',
                 },
         }, 
 
@@ -190,12 +160,8 @@ const useStyles = makeStyles((theme) =>({
 
                 '&:hover': {
                 backgroundColor: '#5BE9B9',
-                },
-
-
-                '@media screen and (max-width:1504px)':{
-                    width: '212px',
-                    height: '53px',
+                
+                
                 },
         },
         iconContainer:{
@@ -211,9 +177,6 @@ const useStyles = makeStyles((theme) =>({
                     
                     
                     },
-        },
-        iconStyle:{
-            height:'30px',  width:'25px'
         },
 
         textContainer : {
@@ -245,12 +208,12 @@ function Column (){
             <div className={classes.projectContainer}>
                 <div className={classes.threeCol}>
                     <div className={classes.coloneContainer}>
-                        <Typography variant='h4' style={{fontFamily:'"eurostile", sans-serif',paddingLeft:'60px',}}>Start a project</Typography> </div>
+                        <Typography variant='h4' style={{fontFamily:'"eurostile", sans-serif',paddingLeft:'80px'}}>Start a project</Typography> </div>
                     <div className={classes.coltwoContainer}><p style={{height:'55px'}}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
                     <div className={classes.colthreeContainer}>
                         {/* <a style={{ */}
                         <Button  className={classes.buttonSty}href="https://mattfarley.ca/project-planner" > 
-                        <span className={classes.iconContainer}><TbHandRock  className={classes.iconStyle}/></span>
+                        <span className={classes.iconContainer}><TbHandRock  style={{ height:'30px',  width:'25px'}}/></span>
                         <span className={classes.textContainer}>Let's do this</span></Button></div>
                 </div>
 

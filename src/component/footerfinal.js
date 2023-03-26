@@ -17,77 +17,181 @@ import { margin } from "@mui/system";
 
 
 const useStyles = makeStyles((theme) =>({
-  container:{
-    backgroundColor:'#6E07F3',height: '850px', paddingLeft: '500px', paddingRight:'250px',marginTop:'30px',
-    
-    [theme.breakpoints.down("sm", "md")]: {
-      height :'1000px',
-      paddingLeft:'5px',
-      paddingRight:'5px',
-      
-      alignItems: 'center',
+
+  footerContainer:{
+
+    maxWidth:'1895px',
+    width:'100%',
+    height:'595px',
+    padding:'64px 24px',
+    backgroundColor:'#6E07F3',
+    textAlign: 'center !important',
+
+    '@media screen and (max-width:1504px)':{
+          width:'auto',
     },
+
+    '@media screen and (max-width:1504px)':{
+      height:'auto',
+    },
+
+  },
+
+  container:{
+    backgroundColor:'#6E07F3',
+    height: '460px', 
+    // paddingLeft: '500px', 
+    // paddingRight:'250px',
+    // marginTop:'30px', 
+    marginLeft:'68px',
+    marginRight:'68px',
+    maxWidth:'1700px', 
+    width:'100%',
+    position: 'relative',
+    
+    '@media screen and (max-width:1504px)':{
+      width:'auto',
+
+
+      '@media screen and (max-width:615px)':{
+        // margin:'0px',
+        height:'auto',
+  },
+
+},
+ 
   }, 
 
 
   logo:{
-    height:'80px', width: '100px', marginTop: '50px', marginLeft: '350px',fontSize: '4em',
-    [theme.breakpoints.down( "sm", "md")]: {
-      // height :'auto',
-      marginLeft:'200px',
-      marginTop:'60px',
-      // paddingRight:'5px',
-      // marginLeft:'200px',
-      
-    },
+    height:'72px',
+     width: '90px', 
+     marginTop: '20px', 
+    //  marginLeft: '350px',
+     fontSize: '4em',
+
+     '@media screen and (max-width:615px)':{
+      marginTop:'15px',
+     },
+
   },
   
   headingContainer:{
-    height:'180px', paddingLeft: '180px',paddingTop: '12px', paddingBottom: '12px', paddingRight: '12px',
+    height:'146px', 
+    margin:'-12px -12px 12px',
+    maxWidth:'1768px',
+    width:'100%',
+    justifyContent: 'center',
+    display:'flex',
+    
 
-    [theme.breakpoints.down("sm", "md")]: {
-      height :'auto',
-      paddingLeft:'50px',
-      paddingRight:'5px',
-      marginTop:'30px',
+    '@media screen and (max-width:1504px)':{
+      width:'auto',
     },
+
+    '@media screen and (max-width:724px)':{
+      width:'auto',
+      display:'inline-block',
+      height:'auto',
+},
+  },
+
+  headingPart:{
+    width:'490px',
+    height:'146px',
+    padding:'12px',
+    
+    '@media screen and (max-width:724px)':{
+      width:'auto',
+    },
+
+    '@media screen and (max-width:526px)':{
+      width:'500',
+    },
+    
+  },
+  heading: {
+    
+    fontSize:'25.6px',
+      
+      fontFamily: ' "eurostile", sans-serif',
+      color: 'antiquewhite',
+      
+      opacity: '0.9',
+      width:'435px',
+      height:'57px',
+      padding:'32px 56px',
+      textAlign: 'center !important',
+
+      '@media screen and (max-width:724px)':{
+        width:'auto',
+        
+      },
+      '@media screen and (max-width:582px)':{
+      fontSize:'20.6px',
+      width:'auto',
+      },
+      // },
+      
   },
 
   socialContainer:{
-    display: 'flex', backgroundColor: '#6E07F3',height: '100px', paddingLeft: '160px',
+     backgroundColor: '#6E07F3',height: '67px', 
+    width:'1700px',
+    marginBottom: '56px',
+    // display: 'flex',
+    // justifyContent:'center',
 
-    [theme.breakpoints.down("sm", "md")]: {
-      paddingLeft: '5px',
-      paddingRight: '5px',
-      height: 'auto',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop:'30px',
-    },
+    '@media screen and (max-width:1504px)':{
+      width:'auto',
+},
+
+
+'@media screen and (max-width:724px)':{
+
+  width:'auto',
+  display:'inline-block',
+  
+  height:'76px',
+},
   },
   
   roundButton : {
     
-      marginTop: "20px",
-      height: "60px",
-      width: "60px",
+      margin: " 0px 13px",
+      height: "55px",
+      width: "55px",
       borderRadius: "100%",
-      paddingLeft: "20px",
-      paddingRight: "10px",
-      outline: "1px solid antiquewhite",
+      paddingLeft: "15px",
+      paddingRight: "8px",
+      // padding:'18.44px 19px',
+      outline: "2px solid antiquewhite",
       // transition: "backgroundColor 0.5s",
       backgroundColor: "#6E07F3",
       "&:hover": {
         backgroundColor: "white",
-  },
-  
+      },
 
+        '@media screen and (max-width:724px)':{
+          margin:'2px 3.2px',
+          minWidth:'15px',
+          width:'52px',
+          height:'52px',
+          padding:'14.4px 12.8px',
+      //     paddingLeft: "10px",
+      // paddingRight: "5px",
+          display:'inline-block',
+    },
 }, 
+
+// MuiButtonStartIcon :{
+//   marginRight:'0px',
+// },
 
 socialIcon : {
         height: '30px', 
         width: '50px',
-        margin: '10px', 
+        // margin: '10px', 
         borderRadius: '70%',
         color: 'white',
         // transition: 'color 0.5s',
@@ -97,42 +201,49 @@ socialIcon : {
           color: "#6E07F3",
           // backgroundColor: "white",
     },
+
+    '@media screen and (max-width:724px)':{
+      width:'35px',
+      height:'20px',
+},
 },
 
-heading: {
-  fontWeight: 'normal',
-    fontStyle: 'normal',
-    color: 'antiquewhite',
-    justifyContent: 'center',
-    opacity: '0.9',
-    
-    paddingTop:'30px',
-},
+
+
+
 
 copyrightContainer:{
-  paddingLeft: '230px',fontSize:'large',color: 'antiquewhite',opacity: '0.8',fontWeight: '500',letterSpacing: '1.5px',
+  // paddingLeft: '230px',
+  fontSize:'23px',
+  color: 'antiquewhite',
+  opacity: '0.9',
+  fontWeight: '500',
+  letterSpacing: '1.5px',
+  width:'1700px',
+  height:'27px',
 
-  [theme.breakpoints.down("sm")]: {
-  paddingLeft:'80px',
-  paddingRight:'10px',
-  height:'auto',
-  justifyContent: 'center',
-      alignItems: 'center',
-  },
+  '@media screen and (max-width:1504px)':{
+    width:'auto',
+},
+
+'@media screen and (max-width:560px)':{
+  fontSize:'18px',
+},
 },
 
 bulmaContainer :
 {
-  paddingLeft:'300px',
-  [theme.breakpoints.down("sm", "md")]: {
-    paddingLeft:'150px'
-  },
+  padding:'11px',
+  width:'1700px',
+  height:'37px',
+
+  '@media screen and (max-width:1504px)':{
+    width:'auto',
+},
 },
 
 }
 ));
-
-
 
 
 
@@ -141,53 +252,39 @@ function Footer (){
   const classes = useStyles();
 
   return(
-    <div>
-      <footer>
+    // <div>
+      <footer className={classes.footerContainer}>
       <div className={classes.container}
-      // style={{backgroundColor:'#6E07F3',height: '850px', paddingLeft: '350px', paddingRight:'350px',}}
       >
       <Image
             src={Logo1}
             alt="Logo-hashtag"
-            // style ={{height:'80px', width: '100px', marginTop: '20px', marginLeft: '350px',fontSize: '4em'}}
             className={classes.logo}
             />
      
 
       <div className={classes.headingContainer}
-      // style={{height:'180px', paddingLeft: '180px',paddingTop: '12px', paddingBottom: '12px', paddingRight: '12px'}}
       >
-      <Typography variant="h4"
+      <div className={classes.headingPart}>
+      <Typography variant="h1"
       className={classes.heading}>
-              Living, learning, & leveling up <br />
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; one day at a time. 
+              Living, learning, & leveling up one day at a time. 
       </Typography>
+      </div>
       </div>
 
     <div className={classes.socialContainer}
-    // style={{display: 'flex', backgroundColor: '#6E07F3',height: '100px', paddingLeft: '160px'}}
     >
     <Button variant="contained" color="primary" 
-    // style={{backgroundColor:'#6E07F3', marginTop: '20px', height: '60px',
-    // borderRadius: '90%', paddingLeft: '10px', paddingRight: '10px',
-    // outline:' 1px solid antiquewhite', 
-    // transition: 'background-color 1s'}} 
 
     className={classes.roundButton }
     href="https://twitter.com/" target="_blank" 
     startIcon={<TfiTwitterAlt
-      // style={{
-      //   height: '30px', width: '50px',
-      //   marginTop: '15px', 
-      //   borderRadius: '60%',
-      //   color: 'white',
-      //   transition: 'color 0.5s'}}
-
       className={classes.socialIcon}
 
       // style={{ fill: '#6E07F3' }}
       /> } >
-          </Button> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          </Button> 
       
 
     <Button variant="contained" color="primary"  className={classes.roundButton }
@@ -196,8 +293,7 @@ function Footer (){
 
       className={classes.socialIcon}
       /> } >
-    </Button> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-
+    </Button>
     <Button variant="contained" color="primary" 
 
     className={classes.roundButton }
@@ -206,8 +302,7 @@ function Footer (){
 
       className={classes.socialIcon}
       /> } >
-    </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+    </Button>
 
     <Button variant="contained" color="primary" 
 
@@ -215,9 +310,7 @@ function Footer (){
     href="https://twitter.com/" target="_blank" 
     startIcon={<BsFillBadgeHdFill
 
-      className={classes.socialIcon}
-      /> } >
-    </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      className={classes.socialIcon}/> } > </Button> 
 
     <Button variant="contained" color="primary" 
 
@@ -227,9 +320,7 @@ function Footer (){
 
       className={classes.socialIcon}
       /> } >
-    </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
+    </Button> 
     <Button variant="contained" color="primary" 
 
     className={classes.roundButton }
@@ -240,19 +331,15 @@ function Footer (){
       /> } >
     </Button> 
           </div>
-      
 
-          <br/>
-          <br/>
-
-          <div className={classes.copyrightContainer}
-          // style={{paddingLeft: '230',fontSize: 'large',color: 'antiquewhite',opacity: '0.8',fontWeight: '500',letterSpacing: '1.5px',}}
-          >
-                       <Typography variant="h6" > Handcrafted by me
+          <div className={classes.copyrightContainer}>
+                       {/* <Typography variant="h6" >  */}
+                       Handcrafted by me
                         <AiOutlineCopyrightCircle  
                         style={{ verticalAlign: '-0.125em',
                           width: '30px',}}/>
-                        twentytwentythree </Typography>
+                        twentytwentythree 
+                        {/* </Typography> */}
                     </div>
                     <br/>
                   
@@ -273,7 +360,7 @@ function Footer (){
       </div>
       </div>
       </footer>
-      </div>
+      // </div>
 
   )
 }
