@@ -19,7 +19,7 @@ const useStyles=makeStyles((theme)=>({
 containertwo:{
   width: '95%', 
   maxWidth: '6000px', 
-  height: '700px', 
+  height: '600px', 
   padding: '40px', 
   backgroundColor: '#f9f9f9', 
   borderRadius: '10px', 
@@ -56,12 +56,18 @@ authorParagraphOne:{
   color: '#141C3A', 
   fontWeight: 'bold',
   fontSize: '25px', 
+  '@media screen and (max-width:560px)':{
+    fontSize: '15px',
+  },
 },
 authorParagraphTwo:{
   fontSize: '20px',
   color: '#141C3A',
   fontFamily:  '"europa ", sans-serif',
-  marginTop: '-1.25rem'
+  marginTop: '-1.25rem',
+  '@media screen and (max-width:560px)':{
+    fontSize: '10px',
+  },
 },
 radiocontainer:{
   textAlign: 'center', 
@@ -131,7 +137,7 @@ const Carousel = () => {
     <div style={{marginBottom: '20px'}}>
       <Image className={classes.image}src={testimonials[activeIndex].image} alt="Testimonial"/>
           <br/><br/>         
-      <Typography className={classes.textParagraph}>{testimonials[activeIndex].text}</Typography><br/><br/><br/>          
+      <Typography className={classes.textParagraph}>{testimonials[activeIndex].text}</Typography><br/><br/>          
       <Typography className={classes.authorParagraphOne}>{testimonials[activeIndex].author1}</Typography><br/><br/>
       <Typography className={classes.authorParagraphTwo}>{testimonials[activeIndex].author2}</Typography><br/><br/>
 {/* testimonial_Radio style  */}
