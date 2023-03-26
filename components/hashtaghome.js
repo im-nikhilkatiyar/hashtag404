@@ -26,10 +26,12 @@ const useStyles = makeStyles({
   '& a':{
   // listStyle: "none",
   textDecoration:"none",
+  maxWidth: '1440px',
 },
 },
 
 nav_item:{
+  maxWidth: '1440px',
   position: "absolute",
   top:"5%",
   transform: "translateY(10%)",
@@ -51,6 +53,7 @@ nav_item:{
 
 nav_item1: {
   // color:"#6E07F3",
+  maxWidth: '1440px',
   border: "2px solid #6E07F3",
   borderRadius: "30px",
   width: "90px",
@@ -121,7 +124,7 @@ img2:{
 
 blue_bar:{
     backgroundColor: "#6e07f3",
-    height: "550px",
+    height: "650px",
     position: "absolute",
     top: "140%",
     left: "0%",
@@ -150,6 +153,14 @@ blue_bar_content:{
       /* font-family:Georgia, 'Times New Roman', Times, serif; */
       fontSize: "21px",
     },
+    '@media screen and (max-width: 454px)': {
+      // flexDirection: 'column',
+      // alignItems: 'start',
+      // padding: '0%',
+      '& h1':{
+        textAlign:"center",
+      },
+  },
   },   
 
   // >>>>>>>>>>>>>>>>   designer    >>>>>>>>>>>>>>>>>>>>>>>
@@ -381,7 +392,7 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
-
+    <nav>
       <div className={classes.hash_navbar}>
         <div className={classes.hashtag_navbar}>
           <Link href="/" className={classes.img404}>
@@ -421,7 +432,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
-
+    </nav>
 {/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
       <div className={classes.hashtag_heading}>
