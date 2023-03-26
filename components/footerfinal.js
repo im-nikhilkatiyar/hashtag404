@@ -24,8 +24,10 @@ const useStyles = makeStyles((theme) =>({
     width:'auto',
     },
     '@media screen and (max-width:615px)':{
-      height:'auto',
-      
+      height:'auto',  
+    },
+    '@media screen and (max-width:414px)':{
+      padding: '32px 16px',
     },
   },
 
@@ -39,9 +41,19 @@ const useStyles = makeStyles((theme) =>({
     position: 'relative',  
     '@media screen and (max-width:1504px)':{
     width:'auto',
-    '@media screen and (max-width:615px)':{
-    height:'auto',},
     }, 
+    '@media screen and (max-width:615px)':{
+    height:'auto',
+    }, 
+    '@media screen and (max-width:414px)':{
+      padding: '0px 16px',
+      height:'auto',
+    },
+    '@media screen and (max-width: 375px)':{
+      height:'auto',
+      marginLeft:'16px',
+      marginRight:'16px',
+    },
   }, 
 
   logo:{
@@ -51,6 +63,12 @@ const useStyles = makeStyles((theme) =>({
     fontSize: '4em',
     '@media screen and (max-width:615px)':{
     marginTop:'15px',
+    },
+    '@media screen and (max-width: 414px)':{
+      height:'36px',
+      width:'45px',
+      marginTop:'8px',
+      fontSize: '2em',
     },
   },
   
@@ -68,6 +86,15 @@ const useStyles = makeStyles((theme) =>({
     width:'auto',
     display:'inline-block',
     height:'auto',},
+    '@media screen and (max-width:414px)':{
+      flexDirection: 'column',
+      height: 'auto',
+      margin: '0px',
+    },
+    '@media screen and (max-width: 375px)':{
+      height:'auto',
+      margin:'0px',
+    },
   },
 
   headingPart:{
@@ -79,6 +106,10 @@ const useStyles = makeStyles((theme) =>({
     },
     '@media screen and (max-width:526px)':{
     width:'500',
+    },
+    '@media screen and (max-width:414px)':{
+      width: '100%',
+      padding: '0px',
     },  
   },
   heading: {    
@@ -96,11 +127,22 @@ const useStyles = makeStyles((theme) =>({
     fontSize:'20.6px',
     width:'auto',
     padding:'32px 0px',
+    },
+    '@media screen and (max-width:414px)':{
+      width: '100%',
+      padding: '18px 0px',
+      fontSize: '20px',
+      lineHeight: '1.3em',
+    },
+    '@media screen and (max-width: 375px)':{
+      fontSize:'20px',
+      padding:'18px 0px',
     },     
   },
 
   socialContainer:{
-    backgroundColor: '#6E07F3',height: '67px', 
+    backgroundColor: '#6E07F3',
+    height: '67px', 
     width:'1700px',
     marginBottom: '56px',
     '@media screen and (max-width:1504px)':{
@@ -110,6 +152,15 @@ const useStyles = makeStyles((theme) =>({
     width:'auto',
     display:'inline-block',  
     height:'76px',
+    },
+    '@media screen and (max-width:414px)':{
+      height: 'auto',
+      marginBottom: '30px',
+      flexWrap: 'wrap',
+    },
+    '@media screen and (max-width: 375px)':{
+      height: 'auto',
+      marginBottom: '24px',
     },
   },
   
@@ -133,6 +184,20 @@ const useStyles = makeStyles((theme) =>({
     padding:'14.4px 12.8px',
     display:'inline-block',
     },
+    '@media screen and (max-width:414px)':{
+      margin:'2px 1.6px',
+      minWidth:'15px',
+      width:'40px',
+      height:'40px',
+      padding:'10.4px 9.6px',
+    },
+    '@media screen and (max-width: 375px)':{
+      margin:'2px 1.6px',
+      minWidth:'15px',
+      width:'30px',
+      height:'30px',
+      padding:'8.4px 7.2px',
+    },
   }, 
 
     socialIcon : {
@@ -146,6 +211,14 @@ const useStyles = makeStyles((theme) =>({
     '@media screen and (max-width:724px)':{
     width:'35px',
     height:'20px',
+    },
+    '@media screen and (max-width:414px)':{
+      width:'25px',
+      height:'15px',
+    },
+    '@media screen and (max-width: 375px)': {
+      width: '20px',
+      height: '12px',
     },
   },
 
@@ -163,6 +236,14 @@ const useStyles = makeStyles((theme) =>({
     '@media screen and (max-width:560px)':{
     fontSize:'18px',
     },
+    '@media screen and (max-width:414px)':{
+      fontSize:'14px',
+      height:'20px',
+    },
+    '@media screen and (max-width: 375px)': {
+      fontSize: '12px',
+      height: '15px',
+    },
   },
 
     bulmaContainer :{
@@ -171,6 +252,14 @@ const useStyles = makeStyles((theme) =>({
     height:'37px',
     '@media screen and (max-width:1504px)':{
     width:'auto',
+    },
+    '@media screen and (max-width:414px)':{
+      height:'30px',
+      padding:'8px',
+    },
+    '@media screen and (max-width: 375px)': {
+      height: '25px',
+      padding: '6px',
     },
   },
   }
