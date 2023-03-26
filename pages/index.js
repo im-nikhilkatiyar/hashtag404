@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Column from '../components/threeColumn';
 import Footer from '../components/footerfinal';
+import Carousel from '../components/carousel';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
+      <Carousel />
       <Column />
       <Footer />
       
