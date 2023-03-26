@@ -8,11 +8,23 @@ import computer from "../assets/computer.JPG";
 import one from "../assets/one.jpg";
 import two from "../assets/two.jpg";
 import three from "../assets/three.jpg";
-import MessageTwoTone from "@mui/icons-material/MessageTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState, useEffect } from "react";
-// import CgDetailsMore from re
 import {CgDetailsMore} from "react-icons/cg";
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 const useStyles = makeStyles({
 
@@ -22,33 +34,9 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "flex-start",
     padding:"20px",
-
-    // "@media screen and (max-width: 1600px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "5%",
-    // },
-    // "@media screen and (max-width: 1400px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "10%",
-    // },
-    // "@media screen and (max-width: 1250px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "15%",
-    // },
     "@media screen and (max-width: 1080px)": {
-      // flexDirection: 'column',
-      // alignItems: 'start',
-      // padding: '0%',
       display: "flex",
-      // marginRight:"20%",
-
-      "& #icon": {
+       "& #icon": {
         display: "none",
         "@media screen and (max-width: 680px)": {
           display: "block",
@@ -60,9 +48,7 @@ const useStyles = makeStyles({
     },
 
     "& > div:nth-child(1)": {
-      // left:"0px",
       width: "70px",
-      // height: "0px",
       marginLeft: "5%",
     },
     "& a": {
@@ -71,18 +57,9 @@ const useStyles = makeStyles({
     // >>>>>   nav list    >>>>>>>>
 
     "& > div:nth-child(2)": {
-      // left:"0px",
       width: "70px",
-      // height: "0px",
       marginRight: "65%",
     },
-  },
-  space: {
-    // maxWidth: "100%",
-    // maxHeight: "100%",
-    // position: "absolute",
-    // top: "100px",
-    // left: "25rem",
   },
   Dot_dot: {
     display:"none",
@@ -90,7 +67,6 @@ const useStyles = makeStyles({
       textAlign:"center",
       display:"block",
       marginLeft:"90%",
-      // margin:"-5%",
       position:"absolute",
       top:"3%",
       
@@ -113,11 +89,7 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
     "@media screen and (max-width: 1080px)": {
       display:"none",
-      // position:"relative",
-      // right:"250px",
-      // top:"40px",
-      // placeItems: "center",
-    },
+      },
 
     "& > div:nth-child(1)": {
       marginRight: "auto",
@@ -127,13 +99,12 @@ const useStyles = makeStyles({
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-
       margin: "10px",
       backgroundColor: "white",
       fontSize: "2ch",
       textDecoration: "none",
       listStyle: "none",
-      padding: "0px 15px",
+      padding: "0px 115px",
       "& a": {
         color: "black",
       },
@@ -157,9 +128,6 @@ const useStyles = makeStyles({
       justifyContent: "center",
       alignItems: "center",
       padding: "15px",
-      // position: "absolute",
-      // transform: "translateY(0%)",
-      // right: "7%",
       textDecoration: "none", // set text decoration to none
       "& a": {
         color: "#6e07f3",
@@ -173,81 +141,65 @@ const useStyles = makeStyles({
       },
     },
   },
-
-  // nav_list:{
-  //           maxWidth:"1440px",
-  //           display:"flex",
-  //           margin:"auto",
-  //           "& a": {
-  //             textDecoration: "none",
-  //           },
-  //   },
 });
-
-function Div3() {
-  const classes = 
-  // useStyles();
-  {
-    div3: "my-div-3",
-    nav_list: "my-nav-list",
-    nav_item: "my-nav-item",
-    nav_list1: "my-nav-list-1",
-    nav_item1: "my-nav-item-1"
-  }
-  ;
-
-  return (
-    <div className={classes.div3}>
-      <div className={classes.nav_list}>
-        <div className={classes.nav_item}>
-          <Link legacyBehavior href="/Mentorship">
-            <a> Mentorship</a>
-          </Link>
-        </div>
-      </div>
-      <div className={classes.nav_list1}>
-        <div className={classes.nav_item1}>
-          <Link legacyBehavior href="/Hello">
-            <a> Say Hello</a>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function Navbar() {
   const classes = useStyles();
-
-  const [showdiv3, setShowdiv3] = useState(
-    false
-  //   typeof window !== 'undefined' ? window.innerWidth >= 1080 : false
-  // );
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const drawerWidth = isMobile ? '100%' : 240;
   
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setShowdiv3(window.innerWidth >= 1080);
-  //   }
+  const [state, setState] = React.useState({
+    right: false,
+  });
 
-  //   window.addEventListener("resize", handleResize);
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
 
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []
-  
-  );
-  const [toggle, setToggle] = useState(false);
-  // const handleClick = () => {
-  //   setShowdiv3(!showdiv3); // toggle the value of showdiv3
-  // };
-  const handleClick=()=> {
-    setToggle()
+    setState({ ...state, [anchor]: open });
   };
 
-  // useEffect(() => {
-  //   if (showdiv3) {
-  //     // myFunction();
-  //   }
-  // }, [showdiv3]);
+  const list = (anchor) => (
+    <div
+      sx={{
+        width: drawerWidth,
+        flexShrink: 0,
+        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+      }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Mentorship', 'Say Hello'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {[].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
 
   return (
     <div>
@@ -271,7 +223,6 @@ function Navbar() {
               </Link>
             </div>
             <div></div>
-            {/* {showdiv3 ? ( */}
             <div className={classes.space}>
  <div className={classes.div3}>
               <div className={classes.nav_list}>
@@ -290,29 +241,23 @@ function Navbar() {
               </div>
 </div>
             </div>
-            {/* ) : (
-              <button style={{
-                width:"fit-content",
-                height:"20px",
-                alignSelf:"center",
-              }} onClick={() => setShowdiv3(true)}>|||</button>
-            )} */}
           </div>
         </div>
       </nav>
 {/* >>>>>>>>>>>>>   Dot_dot   >>>>>>>>>>> */}
-     
-    
-      <div className={classes.Dot_dot}>
-      <button onClick={handleClick}><CgDetailsMore style={{
-        width:"11px",
-        height:"13px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}/></button>
-            {/* {showdiv3 && <Div3 />} */}
-      </div>
+
+<div className={classes.Dot_dot}>
+      <React.Fragment key="right">
+        <Button onClick={toggleDrawer('right', true)}><MenuOpenIcon/></Button>
+        <Drawer
+          anchor="right"
+          open={state['right']}
+          onClose={toggleDrawer('right', false)}
+        >
+          {list('right')}
+        </Drawer>
+      </React.Fragment>
+    </div>
      
 {/* >>>>>>>>>>>>     Images     >>>>>>>>>>>>>>>>>>> */}
     </div>

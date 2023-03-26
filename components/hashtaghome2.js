@@ -2,15 +2,27 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import hashtag from "../assets/hashtag.jpg";
-import "../styles/404.css";
 import mf_avatar from "../assets/mf_avatar.jpg";
 import computer from "../assets/computer.JPG";
 import one from "../assets/one.jpg";
 import two from "../assets/two.jpg";
 import three from "../assets/three.jpg";
-import MessageTwoTone from "@mui/icons-material/MessageTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { useState } from "react";
+import React from "react";
+import MessageIcon from '@mui/icons-material/Message';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const useStyles = makeStyles({
 
@@ -34,7 +46,6 @@ const useStyles = makeStyles({
         },
       },
     },
-
     "& > div:nth-child(1)": {
       width: "70px",
       marginLeft: "5%",
@@ -49,7 +60,6 @@ const useStyles = makeStyles({
       marginRight: "65%",
     },
   },
-
   Dot_dot: {
     display:"none",
     "@media screen and (max-width: 1080px)": {
@@ -59,9 +69,7 @@ const useStyles = makeStyles({
       position:"absolute",
       top:"3%",
     },
-    
   },
-
   div3: {
     maxWidth: "1440px",
     margin: "auto",
@@ -70,7 +78,6 @@ const useStyles = makeStyles({
     "@media screen and (max-width: 1080px)": {
       display:"none",
     },
-
     "& > div:nth-child(1)": {
       marginRight: "auto",
       maxWidth: "1440px",
@@ -85,14 +92,13 @@ const useStyles = makeStyles({
       fontSize: "2ch",
       textDecoration: "none",
       listStyle: "none",
-      padding: "0px 15px",
+      padding: "0px 100px",
       "& a": {
         color: "black",
       },
       "& a:hover": {
         color: "#6E07F3", // set text color to #6E07F3 on hover
       },
-      
     },
 
     // >>>>>>>> nav list1     >>>>>>>>>>>>
@@ -103,7 +109,7 @@ const useStyles = makeStyles({
       backgroundColor: "white",
       border: "2px solid #6E07F3",
       borderRadius: "30px",
-      width: "90px",
+      width: "110px",
       height: "10px",
       display: "flex",
       justifyContent: "center",
@@ -113,7 +119,6 @@ const useStyles = makeStyles({
       "& a": {
         color: "#6e07f3",
       },
-
       "&:hover": {
         backgroundColor: "#6e07f3",
         "& a": {
@@ -136,7 +141,6 @@ h:{
   fontSize: "1.2rem",
 },
 
-
 // >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 img:{
@@ -146,7 +150,6 @@ img:{
   maxWidth: "900px",
   height: "auto",
 },
-
 img1:{
   textAlign:"center",
   width: "400px",
@@ -217,7 +220,6 @@ blue_bar_content:{
       borderRadius: "20px 20px 20px 20px",
     }
     },
- 
     '& > div': {
         
         maxWidth: '500px',
@@ -282,8 +284,6 @@ blue_bar_content:{
     objectFit: 'cover',
     marginBottom: -10,
   },
-  
-
 
 designer_things:{
     fontSize:16,
@@ -300,7 +300,6 @@ designer_things:{
     textDecoration:"none",
     listStyle:"none",
 },
-
 frontend_div2:{
     fontSize:16,
   '& p':{
@@ -313,8 +312,6 @@ frontend_div2:{
     listStyle:"none",
  },
 },
-
-
 mentor_div2:{
     fontSize:16,
   '& p':{
@@ -327,7 +324,6 @@ mentor_div2:{
     listStyle:"none",
  },
 },
-
 
  // >>>>>>>>>>>>>>>  Interested  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -348,8 +344,6 @@ mentor_div2:{
   }
 },
 
-
-
 start: {
   
 '& a': {
@@ -369,50 +363,63 @@ start: {
 
 },
 
-
-
 });
-
-function Div3() {
-  const classes = 
-  {
-    div3: "my-div-3",
-    nav_list: "my-nav-list",
-    nav_item: "my-nav-item",
-    nav_list1: "my-nav-list-1",
-    nav_item1: "my-nav-item-1"
-  }
-  ;
-
-  return (
-    <div className={classes.div3}>
-      <div className={classes.nav_list}>
-        <div className={classes.nav_item}>
-          <Link legacyBehavior href="/Mentorship">
-            <a> Mentorship</a>
-          </Link>
-        </div>
-      </div>
-      <div className={classes.nav_list1}>
-        <div className={classes.nav_item1}>
-          <Link legacyBehavior href="/Hello">
-            <a> Say Hello</a>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 
 function Hashtaghome2() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const drawerWidth = isMobile ? '100%' : 240;
+  const [state, setState] = React.useState({
+    right: false,
+  });
 
-  const [showdiv3, setShowdiv3] = useState(false);
-  const handleClick = () => {
-    setShowdiv3(!showdiv3); // toggle the value of showdiv3
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
   };
 
+  const list = (anchor) => (
+    <div
+      sx={{
+        width: drawerWidth,
+        flexShrink: 0,
+        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+      }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Mentorship', 'Say Hello'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {[].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
 
   return (
     <><><><><div>
@@ -456,11 +463,19 @@ function Hashtaghome2() {
     </div><>
 {/* >>>>>>>>>>>>>>>>>>>>>  Dot_dot   >>>>>>>>>>>>>>>>>> */}
 
-    
+ 
 <div className={classes.Dot_dot}>
-      <button onClick={handleClick}>|||</button>
-            {showdiv3 && <Div3 />}
-      </div>
+      <React.Fragment key="right">
+        <Button onClick={toggleDrawer('right', true)}><MenuOpenIcon/></Button>
+        <Drawer
+          anchor="right"
+          open={state['right']}
+          onClose={toggleDrawer('right', false)}
+        >
+          {list('right')}
+        </Drawer>
+      </React.Fragment>
+    </div>
 
 {/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
@@ -580,7 +595,7 @@ function Hashtaghome2() {
         <p>I’m always open to discussing product design work or partnership opportunities.</p>
         <div className={classes.start}>
           <div id='icon'><Link href="/start">
-            <MessageTwoTone/>
+            <MessageIcon/>
             Start a conversation
           </Link>
           </div>
