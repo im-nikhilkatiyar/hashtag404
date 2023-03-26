@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) =>({
         height: '500px',
         paddingTop: '5px',
         '@media screen and (max-width:1504px)':{            
-        height: '300px',
-        width:'auto',                   
+            height: '300px',
+            width:'auto',                   
         },    
         '@media screen and (max-width:950px)':{
-        height:'400px',                  
+            height:'400px',               
         },
     },
 
@@ -25,41 +25,47 @@ const useStyles = makeStyles((theme) =>({
         height: '166px',
         borderRadius: '12px',
         marginTop: '-5rem',
-        width:'1444px',               
+        width:'1444px',        
+        '@media screen and (max-width:1810px)': { 
+            width:'auto',
+        },              
         '@media screen and (max-width:1504px)': {                
-        height: '166px',            
-        width:'auto',                
-        marginLeft:'30px',
-        marginRight:'30px',                
+            height: '166px',            
+            width:'auto',             
+            marginLeft:'30px',
+            marginRight:'30px',                
         },
         '@media screen and (max-width:915px)':{
-        marginLeft:'80px',
-        marginRight:'20px',
-        height:'300px',
-        width:'720px',               
+            marginLeft:'80px',
+            marginRight:'38px',
+            height:'300px',
+            width:'auto',               
         },
-                    
+        '@media screen and (max-width:570px)':{
+           
+            marginLeft:'5px',
+            marginRight:'5px',
+        },                    
     },
 
     threeCol:{
         display: 'flex',
         color: 'white',
         padding:'56px 20px',
-        letterSpacing: '1px',
         height:'78px',
         width:'1328',
         '@media screen and (max-width:1504px)':{
-        height:'78px',
-        width:'1328',
-        margin:'-12px',
+            height:'78px',
+            width:'1328',
+            margin:'-12px'
         },
         '@media screen and (max-width:915px)':{
-        flexDirection:'column', 
-        alignItems:'center',
-        paddingTop:'20px',
-        height:'250px',
-        width:'780px',
-        padding:'0px',                    
+            flexDirection:'column', 
+            height:'250px',
+            width:'auto',
+            paddingTop:'20px',
+            display:'block',    
+            textAlign: 'center !important',               
         },
     },
 
@@ -69,18 +75,23 @@ const useStyles = makeStyles((theme) =>({
         fontFamily: '"eurostile", sans-serif',
         whiteSpace: 'normal',
         width:'443px',
-        height:'60px',                      
+        height:'60px',                     
         '@media screen and (max-width:1504px)':{                
-        whiteSpace: 'pre',
-        fontSize:'28px',
-        width:'463px',
-        height:'60px',
-        '@media screen and (max-width:915px)':{
-        marginBottom:'10px',
-        width:'463px',
-        height:'60px',
-        },                
+            whiteSpace: 'pre',
+            fontSize:'28px',
+            width:'463px',
+            height:'60px',
         },
+        '@media screen and (max-width:915px)':{
+            marginBottom:'10px',
+            height:'60px',
+            width: 'auto',
+            textAlign:'center',
+        }, 
+        '@media screen and (max-width:570px)':{
+            width:'auto',
+            padding:'0px',
+        },                       
     },
 
     coltwoContainer:{
@@ -91,15 +102,21 @@ const useStyles = makeStyles((theme) =>({
         width:'443px',
         height:'78px',
         padding:'12px',
+        textAlignLast: 'center',
+        textAlign:'justify',
         '@media screen and (max-width:1504px)':{
-        fontSize:'15px',               
-        whiteSpace: 'normal',              
+            fontSize:'15px',               
+            whiteSpace: 'normal',              
         },
         '@media screen and (max-width:915px)':{                   
-        marginBottom:'10px',
-        width:'683px',
-        height:'60px',
-        whiteSpace: 'normal',
+            marginBottom:'10px',
+            width:'auto',
+            height:'50px',
+            whiteSpace: 'normal',
+            textAlign:'center',
+        },
+        '@media screen and (max-width:570px)':{
+            marginBottom:'30px',   
         },
     },
     colthreeContainer : {
@@ -107,10 +124,25 @@ const useStyles = makeStyles((theme) =>({
         height:'77px',
         padding:'12px',
         '@media screen and (max-width:915px)':{                   
-        marginBottom:'10px',
-        width:'443px',
-        height:'60px',                    
-        },
+            marginBottom:'10px',
+            width:'auto',
+            height:'78px', 
+            // textAlignLast: 'center',
+            textAlign:'cenetr', 
+            marginLeft:'110px', 
+        }, 
+        '@media screen and (max-width:800px)':{
+            marginLeft:'90px'
+        },  
+        '@media screen and (max-width:700px)':{
+            marginLeft:'50px'
+        },  
+        '@media screen and (max-width:630px)':{
+            marginLeft:'30px'
+        },  
+        '@media screen and (max-width:630px)':{
+            marginLeft:'5px'
+        },                   
     }, 
     buttonSty:{
         transition: 'background-color 1s',
@@ -119,14 +151,24 @@ const useStyles = makeStyles((theme) =>({
         height: '50px',
         outline: '2px solid #5BE9B9',
         display: 'flex',
-        marginLeft:'80px',
+        marginLeft:'140px',
         '&:hover': {
         backgroundColor: '#5BE9B9',
         },
         '@media screen and (max-width:1504px)':{
-        width: '212px',
-        height: '53px',
+            width: '212px',
+            height: '53px',
         },
+        '@media screen and (max-width:915px)':{
+            width:'210px',
+            height:'48px',       
+        },
+        '@media screen and (max-width:470px)':{
+            marginLeft:'105px',
+         },
+         '@media screen and (max-width:405px)':{
+            marginLeft:'55px',
+         },
     },
     iconContainer:{
         color: 'white',
