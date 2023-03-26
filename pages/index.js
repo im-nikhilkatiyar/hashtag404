@@ -19,6 +19,14 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
+      
+      {/* <Carousel/> */}
+      {/* <Column /> */}
+      {/* <LandingPageContainer /> */}
+
+      {/* <Arr /> */}
+     
+   
 
       {/* <Hashtaghome/> */}
       <Hashtaghome2/>
@@ -30,6 +38,7 @@ export default function Home() {
       {/* <Interested/> */}
       {/* <Bluebar/> */}
       {/* <Container/> */}
+      <Footer />
     </div>
   );
 }
