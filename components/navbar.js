@@ -3,14 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import hashtag from "../assets/hashtag.jpg";
 import "../styles/404.css";
-import mf_avatar from "../assets/mf_avatar.jpg";
-import computer from "../assets/computer.JPG";
-import one from "../assets/one.jpg";
-import two from "../assets/two.jpg";
-import three from "../assets/three.jpg";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { useState, useEffect } from "react";
-import {CgDetailsMore} from "react-icons/cg";
+import React, {  } from "react";
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 import { useTheme } from '@mui/material/styles';
