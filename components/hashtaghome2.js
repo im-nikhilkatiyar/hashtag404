@@ -23,8 +23,13 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
+
+  hash_navbar:{
+    backgroundColor: '#fff',
+  },
 
   hashtag_navbar: {
     maxWidth: "1440px",
@@ -131,7 +136,7 @@ const useStyles = makeStyles({
 //  >>>>>>>>>>>>>>>>>> Header >>>>>>>>>>>>>>>>>>>>
 
 hashtag_heading:{
-
+  backgroundColor:"white",
   textAlign:"center",
 },
 h3:{
@@ -142,7 +147,9 @@ h:{
 },
 
 // >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+imgs:{
+backgroundColor:"white",
+},
 img:{
   margin: "0 auto",
   textAlign:"center",
@@ -201,8 +208,11 @@ blue_bar_content:{
 
 
 // >>>>>>>>>>>>>>>>>>   Container   >>>>>>>>>>>>>>>>
-  container:{
-    
+containerback:{
+    backgroundColor:"white",
+}, 
+container:{
+    backgroundColor:"white",
     maxWidth: '1080px',
     margin:"-60px auto",
     display: 'flex',
@@ -328,6 +338,7 @@ mentor_div2:{
  // >>>>>>>>>>>>>>>  Interested  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
  interest_hash:{
+  backgroundColor:"white",
   textAlign: "center",
   margin:"150px 10px",
 
@@ -422,7 +433,7 @@ function Hashtaghome2() {
   );
 
   return (
-    <><><><><div>
+    <div style={{backgroundColor:"white"}}><><><><div>
       <Head>
         <title>Home-Hashtag404</title>
         <meta
@@ -522,7 +533,8 @@ function Hashtaghome2() {
 
         {/* >>>>>>>>>>>>  Container  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
-      </div></><div className={classes.container}>
+      </div></><div className={classes.containerback}>
+        <div className={classes.container}>
         <div>
           <ul>
             <Image src={one} className={classes.designer_img} />
@@ -586,7 +598,9 @@ function Hashtaghome2() {
             </li>
           </ul>
         </div>
-      </div></>
+      </div>
+      </div>
+      </>
 
  {/* >>>>>>>>>>>>>>>     Interested       >>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
@@ -600,7 +614,7 @@ function Hashtaghome2() {
           </Link>
           </div>
         </div>
-      </div></>
+      </div></div>
   );
 }
 
