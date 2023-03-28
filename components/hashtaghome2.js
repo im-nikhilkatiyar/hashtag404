@@ -23,7 +23,6 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
 
@@ -382,7 +381,7 @@ function Hashtaghome2() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const drawerWidth = isMobile ? '100%' : 240;
   const [state, setState] = React.useState({
-    right: false,
+    top: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -476,14 +475,14 @@ function Hashtaghome2() {
 
  
 <div className={classes.Dot_dot}>
-      <React.Fragment key="right">
-        <Button onClick={toggleDrawer('right', true)}><MenuOpenIcon/></Button>
+      <React.Fragment key="top">
+        <Button onClick={toggleDrawer('top', true)}><MenuOpenIcon/></Button>
         <Drawer
-          anchor="right"
-          open={state['right']}
-          onClose={toggleDrawer('right', false)}
+          anchor="top"
+          open={state['top']}
+          onClose={toggleDrawer('top', false)}
         >
-          {list('right')}
+          {list('top')}
         </Drawer>
       </React.Fragment>
     </div>
