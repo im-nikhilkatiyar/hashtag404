@@ -4,7 +4,7 @@ import pascal2 from '../assets/pascal2.png';
 import Image from 'next/image';
 import { Input, makeStyles, Typography } from '@material-ui/core';
 
-const useStyles=makeStyles((theme)=>({
+const useStyles = makeStyles ((theme) => ({
   container:{
     height:'1400px', 
     width: '95%',
@@ -99,18 +99,16 @@ const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials = [
     {
-        image: pascal1,
-        text:
-        '"Matt was a real pleasure to work with and we look \n forward to working with him again. He’s definitely \n the kind of designer you can trust with a project \n from start to finish."',
-        author1: "Pascal Tremblay",
-        author2: "Creative Lead, Good Kind",     
+      image: pascal1,
+      text:'"Matt was a real pleasure to work with and we look \n forward to working with him again. He’s definitely \n the kind of designer you can trust with a project \n from start to finish."',
+      author1: "Pascal Tremblay",
+      author2: "Creative Lead, Good Kind",     
     },
     {
-        image: pascal2,
-        text:
-          '"Matts a clear communicator with the tenacity and \n confidence to really dig in to tricky design scenarios \n and the collaborative friction thats needed to \n produce excellent work."',
-          author1: "Alvin Engler",
-          author2: "CEO, West Third Enterprises, Inc.",       
+      image: pascal2,
+      text:'"Matts a clear communicator with the tenacity and \n confidence to really dig in to tricky design scenarios \n and the collaborative friction thats needed to \n produce excellent work."',
+      author1: "Alvin Engler",
+      author2: "CEO, West Third Enterprises, Inc.",       
       },
   ];
 
@@ -123,7 +121,7 @@ const Carousel = () => {
     }, [activeIndex, testimonials]);
     const handlePrevClick = () => {
       setActiveIndex(
-      activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1
+      activeIndex === 0 ? testimonials?.length - 1 : activeIndex - 1
       );
     };
     const handleNextClick = () => {
