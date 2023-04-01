@@ -2,6 +2,10 @@
 import Head from 'next/head';
 import Hashtaghome2 from "../components/hashtaghome2";
 // import Navbar from '../components/navbar';
+import Column from '../components/threeColumn';
+import Footer from '../components/footerfinal';
+import Carousel from '../components/carousel';
+
 export default function Home() {
   return (
     <div>
@@ -11,13 +15,13 @@ export default function Home() {
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
             {/* <Navbar/> */}
-      {/* <Carousel/> */}
-      {/* <Column /> */}
+      <Carousel/>
+      <Column />
       {/* <LandingPageContainer /> */}
 
       {/* <Arr /> */}
       <Hashtaghome2/>
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   );
