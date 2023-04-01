@@ -14,10 +14,10 @@ export default function Home() {
       </Head>
       <Navbar/>
       <div>
-        <Testimonial/>
-        <BotttomBanner />
+        {/* <Testimonial/>
+        <BotttomBanner /> */}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

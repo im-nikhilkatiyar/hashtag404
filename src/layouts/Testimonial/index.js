@@ -97,7 +97,7 @@ radio2:{
 }))
 
 
-const testimonials = () => {
+const Testimonials = () => {
   const classes = useStyles();
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials = [
@@ -151,4 +151,4 @@ const testimonials = () => {
   );
 };
   
-export default testimonials;
+export default Testimonials;
