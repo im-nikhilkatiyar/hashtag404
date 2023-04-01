@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import pascal1 from '../assets/pascal1.png';
-import pascal2 from '../assets/pascal2.png';
 import Image from 'next/image';
-import { Input, makeStyles, Typography } from '@material-ui/core';
+import { Input, Typography } from '@mui/material';
+import { makeStyles } from "@mui/styles";
+
+// immges
+import pascal1 from '../../../assets/pascal1.png';
+import pascal2 from '../../../assets/pascal2.png';
 
 const useStyles = makeStyles ((theme) => ({
   container:{
@@ -94,7 +97,7 @@ radio2:{
 }))
 
 
-const Carousel = () => {
+const testimonials = () => {
   const classes = useStyles();
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials = [
@@ -138,8 +141,7 @@ const Carousel = () => {
       <Typography className={classes.textParagraph}>{testimonials[activeIndex].text}</Typography><br/><br/>          
       <Typography className={classes.authorParagraphOne}>{testimonials[activeIndex].author1}</Typography><br/><br/>
       <Typography className={classes.authorParagraphTwo}>{testimonials[activeIndex].author2}</Typography><br/><br/>
-{/* testimonial_Radio style  */}
-    <div className={classes.radiocontainer}>
+      <div className={classes.radiocontainer}>
       <Input type="radio" name="radio-btn" className={classes.radio1} checked={activeIndex === 0} onClick={handlePrevClick}></Input>
       <Input type="radio" name="radio-btn" className={classes.radio2} checked={activeIndex === 1} onClick={handleNextClick}></Input>
       </div>
@@ -148,5 +150,5 @@ const Carousel = () => {
     </div>
   );
 };
-
-export default Carousel;
+  
+export default testimonials;

@@ -1,17 +1,9 @@
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import hashtag from "../assets/hashtag.jpg";
-import mf_avatar from "../assets/mf_avatar.jpg";
-import computer from "../assets/computer.JPG";
-import one from "../assets/one.jpg";
-import two from "../assets/two.jpg";
-import three from "../assets/three.jpg";
-import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
 import MessageIcon from '@mui/icons-material/Message';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { makeStyles } from "@mui/styles";
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
@@ -23,6 +15,16 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { useMediaQuery, useTheme } from "@mui/material";
+
+// images
+import hashtag from "../../../assets/hashtag.jpg";
+import mf_avatar from "../../../assets/mf_avatar.jpg";
+import computer from "../../../assets/computer.JPG";
+import one from "../../../assets/one.jpg";
+import two from "../../../assets/two.jpg";
+import three from "../../../assets/three.jpg";
+
 
 const useStyles = makeStyles({
 
@@ -375,7 +377,7 @@ start: {
 
 });
 
-function Hashtaghome2() {
+function NavBarContainer() {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -608,8 +610,10 @@ function Hashtaghome2() {
         <p>I’m always open to discussing product design work or partnership opportunities.</p>
         <div className={classes.start}>
           <div id='icon'><Link href="/start">
+            <span>
             <MessageIcon/>
             Start a conversation
+            </span>
           </Link>
           </div>
         </div>
@@ -617,4 +621,4 @@ function Hashtaghome2() {
   );
 }
 
-export default Hashtaghome2;
+export default NavBarContainer;
