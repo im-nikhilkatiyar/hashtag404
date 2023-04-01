@@ -1,4 +1,7 @@
+// import Footer from '@/component/footer';
 import Head from 'next/head';
+import Hashtaghome2 from "../components/hashtaghome2";
+// import Navbar from '../components/navbar';
 import Column from '../components/threeColumn';
 import Footer from '../components/footerfinal';
 import Carousel from '../components/carousel';
@@ -11,10 +14,15 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
-      <Carousel />
+            {/* <Navbar/> */}
+      <Carousel/>
       <Column />
+      {/* <LandingPageContainer /> */}
+
+      {/* <Arr /> */}
+      <Hashtaghome2/>
       <Footer />
-      
+
     </div>
   );
 }

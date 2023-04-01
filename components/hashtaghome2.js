@@ -2,21 +2,33 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import hashtag from "../assets/hashtag.jpg";
-import "../styles/404.css";
 import mf_avatar from "../assets/mf_avatar.jpg";
 import computer from "../assets/computer.JPG";
 import one from "../assets/one.jpg";
 import two from "../assets/two.jpg";
 import three from "../assets/three.jpg";
-import MessageTwoTone from "@mui/icons-material/MessageTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
-import Header from "./header";
-import Navbar from "./navbar";
-import React, { useState, useEffect } from "react";
-
-// const useStyles = makeStyles((theme) => ({
+import React from "react";
+import MessageIcon from '@mui/icons-material/Message';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const useStyles = makeStyles({
+
+  hash_navbar:{
+    backgroundColor: '#fff',
+  },
 
   hashtag_navbar: {
     maxWidth: "1440px",
@@ -25,30 +37,8 @@ const useStyles = makeStyles({
     justifyContent: "flex-start",
     padding:"20px",
 
-    // "@media screen and (max-width: 1600px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "5%",
-    // },
-    // "@media screen and (max-width: 1400px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "10%",
-    // },
-    // "@media screen and (max-width: 1250px)": {
-    //   // flexDirection: 'column',
-    //   // alignItems: 'start',
-    //   // padding: '0%',
-    //   marginRight: "15%",
-    // },
     "@media screen and (max-width: 1080px)": {
-      // flexDirection: 'column',
-      // alignItems: 'start',
-      // padding: '0%',
       display: "flex",
-      // marginRight:"20%",
 
       "& #icon": {
         display: "none",
@@ -60,11 +50,8 @@ const useStyles = makeStyles({
         },
       },
     },
-
     "& > div:nth-child(1)": {
-      // left:"0px",
       width: "70px",
-      // height: "0px",
       marginLeft: "5%",
     },
     "& a": {
@@ -73,18 +60,9 @@ const useStyles = makeStyles({
     // >>>>>   nav list    >>>>>>>>
 
     "& > div:nth-child(2)": {
-      // left:"0px",
       width: "70px",
-      // height: "0px",
       marginRight: "65%",
     },
-  },
-  space: {
-    // maxWidth: "100%",
-    // maxHeight: "100%",
-    // position: "absolute",
-    // top: "100px",
-    // left: "25rem",
   },
   Dot_dot: {
     display:"none",
@@ -92,13 +70,10 @@ const useStyles = makeStyles({
       textAlign:"center",
       display:"block",
       marginLeft:"90%",
-      // margin:"-5%",
       position:"absolute",
       top:"3%",
     },
-    
   },
-
   div3: {
     maxWidth: "1440px",
     margin: "auto",
@@ -106,12 +81,7 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
     "@media screen and (max-width: 1080px)": {
       display:"none",
-      // position:"relative",
-      // right:"250px",
-      // top:"40px",
-      // placeItems: "center",
     },
-
     "& > div:nth-child(1)": {
       marginRight: "auto",
       maxWidth: "1440px",
@@ -126,14 +96,13 @@ const useStyles = makeStyles({
       fontSize: "2ch",
       textDecoration: "none",
       listStyle: "none",
-      padding: "0px 15px",
+      padding: "0px 100px",
       "& a": {
         color: "black",
       },
       "& a:hover": {
         color: "#6E07F3", // set text color to #6E07F3 on hover
       },
-      
     },
 
     // >>>>>>>> nav list1     >>>>>>>>>>>>
@@ -144,20 +113,16 @@ const useStyles = makeStyles({
       backgroundColor: "white",
       border: "2px solid #6E07F3",
       borderRadius: "30px",
-      width: "90px",
+      width: "110px",
       height: "10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       padding: "15px",
-      // position: "absolute",
-      // transform: "translateY(0%)",
-      // right: "7%",
       textDecoration: "none", // set text decoration to none
       "& a": {
         color: "#6e07f3",
       },
-
       "&:hover": {
         backgroundColor: "#6e07f3",
         "& a": {
@@ -166,105 +131,52 @@ const useStyles = makeStyles({
       },
     },
   },
-
-  // nav_list:{
-  //           maxWidth:"1440px",
-  //           display:"flex",
-  //           margin:"auto",
-  //           "& a": {
-  //             textDecoration: "none",
-  //           },
-  //   },
-  
+ 
 //  >>>>>>>>>>>>>>>>>> Header >>>>>>>>>>>>>>>>>>>>
 
-
 hashtag_heading:{
-
+  backgroundColor:"white",
   textAlign:"center",
 },
 h3:{
   fontSize: "2.5rem",
-  // position: "absolute",
-  // marginLeft: "22%",
-  // top: "15%",
 },
 h:{
   fontSize: "1.2rem",
-  // position: "absolute",
-  // top: "32%",
-  // marginLeft: "28%",
 },
-
 
 // >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
 imgs:{
-// padding:"0rem 1.5rem",
+backgroundColor:"white",
 },
-
 img:{
   margin: "0 auto",
-  // position:"relative",
-  // width: "auto",
   textAlign:"center",
   width: "100%",
   maxWidth: "900px",
   height: "auto",
 },
-
 img1:{
   textAlign:"center",
   width: "400px",
-  // maxWidth: "900px",
   height: "auto",
-  
-  // height:"auto",
   maxWidth:"100%",
-  // width: "25%",
-  // height: "35%",
-  // position: "absolute",
-  // top: "30%",
-  // left: "35%",
-  // alignItems: "center",
 },
 img2:{
   height:"auto",
   maxWidth:"100%",
-  // width: "60%",
-  // height: "40%",
-  // position: "absolute",
-  // top: "62%",
-  // left: "20%",
-  // alignItems: "center", 
 },
 
-   
 // >>>>>>>>>>>>>>>>>>    Blue bar      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 
 blue_bar:{
   backgroundColor: "#6e07f3",
   height: "650px",
-  // position: "absolute",
-  // top: "140%",
-  // left: "0%",
-  // right: "0%",
-
-  // margin: "auto",
-  // display: "flex",
-  // padding: "20px",
-  // maxWidth: "1440px",
-  // justifyContent: "flex-start",
 },
 
 // >>>>>>>>>>>>>>>>>>      blue_bar_content        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-
 blue_bar_content:{
-  // maxHeight:"10px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -279,13 +191,9 @@ blue_bar_content:{
     color: "white",
     textAlign: "center",
     width: "62%",
-    /* font-family:Georgia, 'Times New Roman', Times, serif; */
     fontSize: "21px",
   },
   '@media screen and (max-width: 454px)': {
-    // flexDirection: 'column',
-    // alignItems: 'start',
-    // padding: '0%',
     '& h1':{
       textAlign:"center",
     },
@@ -297,47 +205,36 @@ blue_bar_content:{
 
 // >>>>>>>>>>>>>>   Bluebar-Container     >>>>>>>>>>>>>>>>>>>>>>>
 
-// blue_bar_container: {
-//   backgroundColor: "#6e07f3",
-//   height: "auto",
-  
-// },
 
 // >>>>>>>>>>>>>>>>>>   Container   >>>>>>>>>>>>>>>>
-  container:{
-    
+containerback:{
+    backgroundColor:"white",
+}, 
+container:{
+    backgroundColor:"white",
     maxWidth: '1080px',
-    // margin: '-10rem 9.2rem',
     margin:"-60px auto",
     display: 'flex',
     justifyContent: 'space-around',
     padding: '0px',
     backgroundColor:"white",
     borderRadius:"20px",
-    // boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-    // border: "0.5px solid brown",
-    // borderRadius: "20px 20px 20px 20px",
   
     '@media screen and (max-width: 850px)': {
         flexDirection: 'column',
         alignItems: 'center',
         margin:"-60px auto",
-        // borderRadius:"1px",
     '& > div': {
     
       borderRadius: "20px 20px 20px 20px",
     }
     },
-    // flexWrap: 'wrap',
- 
     '& > div': {
         
         maxWidth: '500px',
         minWidth: '350px',
         height: '830px',
-        // background: 'blue',
         margin: '2px',
-        // color: 'white',
         width: '100%',
         '@media screen and (max-width: 1070px)': {
             minWidth: '280px',
@@ -396,8 +293,6 @@ blue_bar_content:{
     objectFit: 'cover',
     marginBottom: -10,
   },
-  
-
 
 designer_things:{
     fontSize:16,
@@ -414,7 +309,6 @@ designer_things:{
     textDecoration:"none",
     listStyle:"none",
 },
-
 frontend_div2:{
     fontSize:16,
   '& p':{
@@ -427,8 +321,6 @@ frontend_div2:{
     listStyle:"none",
  },
 },
-
-
 mentor_div2:{
     fontSize:16,
   '& p':{
@@ -442,35 +334,25 @@ mentor_div2:{
  },
 },
 
-
  // >>>>>>>>>>>>>>>  Interested  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
  interest_hash:{
-  // position: "absolute",
-  // bottom: "-270%",
-  // left: "40%",
+  backgroundColor:"white",
   textAlign: "center",
   margin:"150px 10px",
 
   '& p':{
-      // position: "relative",
-      // bottom: "-220%",
-      // left: "-20%",
-  // textAlign: "-webkit-center",
       fontSize: "20px",
       margin:"40px",
   },
   '& .MuiSvgIcon-root': {
       width: '60px',
       textAlign: "center",
-      // width: "70px",
       height: "25px",
       margin:"-5px",
       
   }
 },
-
-
 
 start: {
   
@@ -479,18 +361,7 @@ start: {
       color: '#6e07f3',
       border: "2px solid #6E07F3",
       borderRadius: "30px",
-      // width: "970px",
-      // height: "20px",
-      // display: "center",
-      // justifyContent: "center",
-      // alignItems: "center",
-      //   borderRadius
-      //   borderWidth: "5px",
-      //   backgroundColor:"blue",
       padding: "15px",
-      // position: "absolute",
-      // top: "95.5%",
-      // right: "55%",
       listStyle: "none",
       textDecoration: "none",
       fontSize: 20,
@@ -502,54 +373,66 @@ start: {
 
 },
 
-
-
 });
-
-function Div3() {
-  const classes = 
-  // useStyles();
-  {
-    div3: "my-div-3",
-    nav_list: "my-nav-list",
-    nav_item: "my-nav-item",
-    nav_list1: "my-nav-list-1",
-    nav_item1: "my-nav-item-1"
-  }
-  ;
-
-  return (
-    <div className={classes.div3}>
-      <div className={classes.nav_list}>
-        <div className={classes.nav_item}>
-          <Link legacyBehavior href="/Mentorship">
-            <a> Mentorship</a>
-          </Link>
-        </div>
-      </div>
-      <div className={classes.nav_list1}>
-        <div className={classes.nav_item1}>
-          <Link legacyBehavior href="/Hello">
-            <a> Say Hello</a>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 
 function Hashtaghome2() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const drawerWidth = isMobile ? '100%' : 240;
+  const [state, setState] = React.useState({
+    top: false,
+  });
 
-  const [showdiv3, setShowdiv3] = useState(false);
-  const handleClick = () => {
-    setShowdiv3(!showdiv3); // toggle the value of showdiv3
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
   };
 
+  const list = (anchor) => (
+    <div
+      sx={{
+        width: drawerWidth,
+        flexShrink: 0,
+        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+      }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Mentorship', 'Say Hello'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {[].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
 
   return (
-    <><><><><div>
+    <div style={{backgroundColor:"white"}}><><><><div>
       <Head>
         <title>Home-Hashtag404</title>
         <meta
@@ -568,7 +451,6 @@ function Hashtaghome2() {
               </Link>
             </div>
             <div></div>
-            {/* {showDev3 ? ( */}
             <div className={classes.div3}>
               <div className={classes.nav_list}>
                 <div className={classes.nav_item}>
@@ -585,20 +467,25 @@ function Hashtaghome2() {
                 </div>
               </div>
             </div>
-            {/* ) : (
-              <button style={{width:"fit-content",height:"20px",alignSelf:"center",}} onClick={() => setShowDev3(true)}>|||</button>
-            )} */}
           </div>
         </div>
       </nav>
     </div><>
 {/* >>>>>>>>>>>>>>>>>>>>>  Dot_dot   >>>>>>>>>>>>>>>>>> */}
 
-    
+ 
 <div className={classes.Dot_dot}>
-      <button onClick={handleClick}>|||</button>
-            {showdiv3 && <Div3 />}
-      </div>
+      <React.Fragment key="top">
+        <Button onClick={toggleDrawer('top', true)}><MenuOpenIcon/></Button>
+        <Drawer
+          anchor="top"
+          open={state['top']}
+          onClose={toggleDrawer('top', false)}
+        >
+          {list('top')}
+        </Drawer>
+      </React.Fragment>
+    </div>
 
 {/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
@@ -645,7 +532,8 @@ function Hashtaghome2() {
 
         {/* >>>>>>>>>>>>  Container  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
-      </div></><div className={classes.container}>
+      </div></><div className={classes.containerback}>
+        <div className={classes.container}>
         <div>
           <ul>
             <Image src={one} className={classes.designer_img} />
@@ -709,7 +597,9 @@ function Hashtaghome2() {
             </li>
           </ul>
         </div>
-      </div></>
+      </div>
+      </div>
+      </>
 
  {/* >>>>>>>>>>>>>>>     Interested       >>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
@@ -718,17 +608,12 @@ function Hashtaghome2() {
         <p>I’m always open to discussing product design work or partnership opportunities.</p>
         <div className={classes.start}>
           <div id='icon'><Link href="/start">
-            <MessageTwoTone style={{
-              //   position: "absolute",
-              //   left: "7%",
-              //   top: "30%",
-              //   width: "50px",
-            }} />
+            <MessageIcon/>
             Start a conversation
           </Link>
           </div>
         </div>
-      </div></>
+      </div></div>
   );
 }
 
