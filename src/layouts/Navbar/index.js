@@ -17,7 +17,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { useMediaQuery, useTheme } from "@mui/material";
 
-// images
+// imagess
 import hashtag from "../../../assets/hashtag.jpg";
 import mf_avatar from "../../../assets/mf_avatar.jpg";
 import computer from "../../../assets/computer.JPG";
