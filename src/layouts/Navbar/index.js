@@ -73,7 +73,7 @@ const useStyles = makeStyles({
       display:"block",
       marginLeft:"90%",
       position:"absolute",
-      top:"3%",
+      top:"1.5%",
     },
   },
   div3: {
@@ -211,6 +211,7 @@ blue_bar_content:{
 // >>>>>>>>>>>>>>>>>>   Container   >>>>>>>>>>>>>>>>
 containerback:{
     backgroundColor:"white",
+    padding:"1px",
 }, 
 container:{
     backgroundColor:"white",
@@ -273,6 +274,7 @@ container:{
     textDecoration:"none",
     listStyle:"none",
        },
+       
    },
    designer_img: {
     width: "25%",
@@ -342,7 +344,8 @@ mentor_div2:{
   backgroundColor:"white",
   textAlign: "center",
   margin:"150px 10px",
-
+  textAlign: "-webkit-center",
+  
   '& p':{
       fontSize: "20px",
       margin:"40px",
@@ -350,27 +353,23 @@ mentor_div2:{
   '& .MuiSvgIcon-root': {
       width: '60px',
       textAlign: "center",
+      alignItems:"center",
       height: "25px",
-      margin:"-5px",
+      margin:"-9px",
       
   }
 },
-
 start: {
+  color: "#6e07f3",
+  border:"2px solid #6e07f3",
+  borderRadius:"35px",
+  maxWidth:"250px",
+  height:"40px",
+  padding:"10px",
   
-'& a': {
-  
-      color: '#6e07f3',
-      border: "2px solid #6E07F3",
-      borderRadius: "30px",
-      padding: "15px",
-      listStyle: "none",
-      textDecoration: "none",
-      fontSize: 20,
-},
-'& a:hover': {
-  backgroundColor: '#6e07f3',
-  color: 'white',
+  "&:hover": {
+  backgroundColor: "#6e07f3",
+  color:"white",
 },
 
 },
