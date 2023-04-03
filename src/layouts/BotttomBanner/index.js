@@ -1,7 +1,7 @@
 import React from 'react';
 import {TbHandRock} from "react-icons/tb";
-import { makeStyles } from "@material-ui/core";
-import { Button, Typography } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { Button, Typography } from '@mui/material';
 
 const useStyles = makeStyles((theme) =>({
     sectionContainer:{
@@ -200,7 +200,7 @@ const useStyles = makeStyles((theme) =>({
 }));
 
 
-function Column (){
+function BottomBanner (){
     const classes = useStyles();    
     return (
         <div className={classes.sectionContainer}>
@@ -219,4 +219,4 @@ function Column (){
         </div> 
     )
 }
-export default Column;
+export default BottomBanner;

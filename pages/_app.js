@@ -1,5 +1,20 @@
+import React from "react";
+import Head from "next/head";
 import '../styles/globals.css'
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-export default MyApp
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <React.Fragment>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Hashtag 404</title>
+      </Head>
+      <Component {...pageProps} />
+    </React.Fragment>
+  );
+};
+
+export default App

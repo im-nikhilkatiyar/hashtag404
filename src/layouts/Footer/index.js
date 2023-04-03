@@ -1,9 +1,5 @@
 import React from "react";
-import Logo1 from '../assets/Logo.jpg';
-import bulma from '../assets/made-with-bulma.png';
-import {Typography,Button} from "@material-ui/core";
 import Image from 'next/image';
-import { makeStyles } from "@material-ui/core";
 import {TfiTwitterAlt} from "react-icons/tfi";
 import {TfiDribbble} from "react-icons/tfi";
 import { TfiLinkedin} from "react-icons/tfi";
@@ -11,6 +7,12 @@ import {TbBrandProducthunt} from "react-icons/tb";
 import {SlEnvolope} from  "react-icons/sl";
 import {BsFillBadgeHdFill} from "react-icons/bs";
 import {AiOutlineCopyrightCircle} from "react-icons/ai";
+import { makeStyles } from "@mui/styles";
+import { Button, Typography } from "@mui/material";
+
+// images
+import Logo1 from '../../../assets/Logo.jpg';
+import bulma from '../../../assets/made-with-bulma.png';
 
 const useStyles = makeStyles((theme) =>({
   footerContainer:{
