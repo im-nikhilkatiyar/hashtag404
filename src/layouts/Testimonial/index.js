@@ -82,6 +82,9 @@ containertwo:{
   },
 },
 containerthree: {
+  marginBottom: '20px',
+},
+imageContainer: {
   maxWidth: "10%",
   marginLeft: "45%",
   '@media screen and (max-width:700px)': {
@@ -200,8 +203,8 @@ const Testimonials = () => {
       <h1 className={classes.headingOne}>Testimonials</h1>
       <h2 className={classes.headingTwo}>People I've worked with have said some nice things...</h2>
     <div className={classes.containertwo}>
-    <div style={{marginBottom: '20px'}}>
     <div className={classes.containerthree}>
+    <div className={classes.imageContainer}>
       <Image className={classes.image}src={testimonials[activeIndex].image} alt="Testimonial"/><br/><br/></div>       
       <Typography className={classes.textParagraph}>{testimonials[activeIndex].text}</Typography><br/><br/>          
       <Typography className={classes.authorParagraphOne}>{testimonials[activeIndex].author1}</Typography><br/><br/>
