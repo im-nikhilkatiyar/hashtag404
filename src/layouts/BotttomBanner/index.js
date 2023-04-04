@@ -7,14 +7,14 @@ const useStyles = makeStyles((theme) =>({
 
 sectionContainer:{
     backgroundColor:'#6E07F3',
-    height: '250px',
+    height: '230px',
     paddingTop: '5px',
     '@media screen and (max-width:1504px)':{            
     height: '200px',
     width:'auto',                   
     },    
     '@media screen and (max-width:950px)':{
-    height:'300px',               
+    height:'270px',               
     },
 },
 projectContainer:{
@@ -54,7 +54,6 @@ threeCol:{
     '@media screen and (max-width:1504px)':{
     height:'78px',
     width:'1328',
-    margin:'-12px'
     },
     '@media screen and (max-width:915px)':{
     flexDirection:'column', 
@@ -114,6 +113,9 @@ coltwoContainer:{
     marginBottom:'30px',   
     },
 },
+secondPara : {
+    height:'55px',
+},
 colthreeContainer : {
     width:'443px',
     height:'77px',
@@ -129,14 +131,11 @@ colthreeContainer : {
     marginLeft:'90px'
     },  
     '@media screen and (max-width:700px)':{
-    marginLeft:'50px'
+    marginLeft:'40px'
     },  
     '@media screen and (max-width:630px)':{
     marginLeft:'30px'
-    },  
-    '@media screen and (max-width:630px)':{
-    marginLeft:'5px'
-    },                   
+    },                    
 }, 
 buttonSty:{
     transition: 'background-color 1s',
@@ -192,12 +191,11 @@ textContainer : {
 },
 }));
 
-
 function BottomBanner (){
     const classes = useStyles();
 
     useEffect(() => {
-        document.body.classList.add("whiteBg");
+        document.body?.classList.add("whiteBg");
     }, []);
 
     return (
@@ -206,7 +204,7 @@ function BottomBanner (){
         <div className={classes.threeCol}>
         <div className={classes.coloneContainer}>
             <Typography variant='h4' style={{fontFamily:'"eurostile", sans-serif',paddingLeft:'60px',}}>Start a project</Typography> </div>
-        <div className={classes.coltwoContainer}><p style={{height:'55px'}}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
+        <div className={classes.coltwoContainer}><p calssName={classes.secondPara}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
         <div className={classes.colthreeContainer}>
             <Button  className={classes.buttonSty}href="https://mattfarley.ca/project-planner" > 
                 <span className={classes.iconContainer}><TbHandRock  className={classes.iconStyle}/></span>

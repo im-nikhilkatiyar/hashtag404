@@ -5,8 +5,8 @@ import {TfiDribbble} from "react-icons/tfi";
 import { TfiLinkedin} from "react-icons/tfi";
 import {TbBrandProducthunt} from "react-icons/tb";
 import {SlEnvolope} from  "react-icons/sl";
-import {BsFillBadgeHdFill} from "react-icons/bs";
 import {AiOutlineCopyrightCircle} from "react-icons/ai";
+import {CgIndieHackers} from "react-icons/cg";
 import { makeStyles } from "@mui/styles";
 import { Button, Typography } from "@mui/material";
 
@@ -62,8 +62,8 @@ img_container:{
   marginLeft:'45%',
   '@media screen and (max-width: 900px)':{
   maxWidth:'100%',
-  width:'28%',
-  marginLeft:'35%',
+  width:'58%',
+  marginLeft:'20%',
   transform: 'scale(0.8)',
   fontSize:'2vw',
   },
@@ -264,14 +264,10 @@ bulmaContainer :{
   },
   },
 bulmaImage: {
-  //  height: '31px',
   width:'20%',
-  // minWidth:'1%',
   textAlign: 'center',
-  // paddingLeft: '20px'
   maxWidth:'100%',
   transform: 'scale(0.5)',
-
   },
   }
 ));
@@ -283,7 +279,7 @@ function Footer (){
     <footer className={classes.footerContainer}>
     <div className={classes.container}>
       <div className={classes.img_container}>
-      <Image src={Logo1} alt="Logo-hashtag" className={classes.logo}/>
+        <Image src={Logo1} alt="Logo-hashtag" className={classes.logo}/>
       </div>
     <div className={classes.headingContainer}>
     <div className={classes.headingPart}>
@@ -291,12 +287,18 @@ function Footer (){
     </div>
     </div>
     <div className={classes.socialContainer}>
-      <Button variant="contained" color="primary" className={classes.roundButton } href="https://twitter.com/" target="_blank" startIcon={<TfiTwitterAlt className={classes.socialIcon}/> } ></Button> 
-      <Button variant="contained" color="primary"  className={classes.roundButton }href="https://twitter.com/" target="_blank" startIcon={<TfiDribbble className={classes.socialIcon}/> } ></Button>
-      <Button variant="contained" color="primary" className={classes.roundButton } href="https://dribbble.com/mattfarley" target="_blank" startIcon={<TfiLinkedin className={classes.socialIcon}   /> } ></Button>
-      <Button variant="contained" color="primary" className={classes.roundButton } href="https://www.linkedin.com/in/matthew-farley-32526014/" target="_blank" startIcon={<BsFillBadgeHdFill className={classes.socialIcon}/> } > </Button> 
-      <Button variant="contained" color="primary" className={classes.roundButton } href="https://www.indiehackers.com/mattfarley/history" target="_blank" startIcon={<TbBrandProducthunt className={classes.socialIcon} /> } ></Button> 
-      <Button variant="contained" color="primary" className={classes.roundButton } href="https://www.producthunt.com/@farleymatters" target="_blank" startIcon={<SlEnvolope className={classes.socialIcon}/> } ></Button> 
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary" className={classes.roundButton } startIcon={<TfiTwitterAlt className={classes.socialIcon}/> } ></Button> </a>
+      <a href="https://dribbble.com/mattfarley" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary"  className={classes.roundButton } startIcon={<TfiDribbble className={classes.socialIcon}/> } ></Button></a>
+      <a href="https://www.linkedin.com/in/matthew-farley-32526014/" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary" className={classes.roundButton } startIcon={<TfiLinkedin className={classes.socialIcon}/> } ></Button></a>
+      <a href="https://www.indiehackers.com/mattfarley/history" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary" className={classes.roundButton }  startIcon={<CgIndieHackers className={classes.socialIcon}/> } > </Button> </a>
+      <a href="https://www.producthunt.com/@farleymatters" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary" className={classes.roundButton } startIcon={<TbBrandProducthunt className={classes.socialIcon} /> } ></Button> </a>
+      <a href="mattfarley@hey.com" target="_blank" rel="noopener noreferrer">
+        <Button variant="contained" color="primary" className={classes.roundButton } startIcon={<SlEnvolope className={classes.socialIcon}/> } ></Button> </a>
     </div>
     <div className={classes.copyrightContainer}>Handcrafted by me <AiOutlineCopyrightCircle  style={{ verticalAlign: '-0.125em', width: '30px',}}/> twentytwentythree </div><br/>
     <div className={classes.bulmaContainer}><a href="https://bulma.io/" >

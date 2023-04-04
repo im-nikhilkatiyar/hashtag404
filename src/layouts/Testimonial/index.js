@@ -19,9 +19,13 @@ container:{
   maxHeight:'720px',
   },
   '@media screen and (max-width:885px)': {
-    width: '100%',
-    maxHeight:'680px',
-    },
+  width: '100%',
+  maxHeight:'680px',
+  },
+  '@media screen and (max-width:570px)': {
+  width: '100%',
+  maxHeight:'620px',
+  },
 },
 headingOne:{
   height:'10%',
@@ -80,6 +84,9 @@ containertwo:{
 containerthree: {
   maxWidth: "10%",
   marginLeft: "45%",
+  '@media screen and (max-width:700px)': {
+  maxWidth:'15%',
+  },
 },
 image:{
   height: '150px',
@@ -115,8 +122,8 @@ authorParagraphOne:{
   color: '#141C3A', 
   fontWeight: 'bold',
   fontSize: '25px', 
-  '@media screen and (max-width:560px)':{
-  fontSize: '15px',
+  '@media screen and (max-width:800px)':{
+  fontSize: '18px',
   },
 },
 authorParagraphTwo:{
