@@ -3,6 +3,10 @@ import Navbar from "../src/layouts/Navbar";
 import Testimonial from '../src/layouts/Testimonial';
 import BotttomBanner from '../src/layouts/BotttomBanner';
 import Footer from '../src/layouts/Footer';
+import { Container } from '@mui/system';
+import Conversation from '../src/layouts/Conversation';
+import Containerbox from '../src/layouts/Container';
+import Header from "../src/layouts/Header";
 
 export default function Home() {
   return (
@@ -13,6 +17,9 @@ export default function Home() {
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
       <Navbar/>
+      <Header/>
+      <Containerbox/>
+      <Conversation/>
       <div>
         {/* <Testimonial/>
         <BotttomBanner /> */}
