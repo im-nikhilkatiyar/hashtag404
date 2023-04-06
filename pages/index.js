@@ -1,4 +1,5 @@
 import Head from 'next/head';
+// import React from 'react';
 import Navbar from "../src/layouts/Navbar";
 import Testimonial from '../src/layouts/Testimonial';
 import BotttomBanner from '../src/layouts/BotttomBanner';
@@ -12,12 +13,12 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div>
-        {/* <Testimonial/>
-        <BotttomBanner /> */}
+        <Testimonial/> 
+        <BotttomBanner /> 
       </div>
-      {/* <Footer /> */}
+      <Footer /> 
     </div>
   );
 };
