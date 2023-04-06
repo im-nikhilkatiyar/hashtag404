@@ -9,76 +9,77 @@ import computer from "../../../assets/computer.JPG";
 
 
 const useStyles = makeStyles({
-//  >>>>>>>>>>>>>>>>>> Header >>>>>>>>>>>>>>>>>>>>
+  //   Header 
 
-heading:{
-  backgroundColor:"white",
-  textAlign:"center",
-},
-h3:{
-  fontSize: "2.5rem",
-},
-h:{
-  fontSize: "1.2rem",
-},
-
-// >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-imgs:{
-backgroundColor:"white",
-},
-img:{
-  margin: "0 auto",
-  textAlign:"center",
-  width: "100%",
-  maxWidth: "900px",
-  height: "auto",
-},
-img1:{
-  textAlign:"center",
-  width: "400px",
-  height: "auto",
-  maxWidth:"100%",
-},
-img2:{
-  height:"auto",
-  maxWidth:"100%",
-},
-
-// >>>>>>>>>>>>>>>>>>    Blue bar      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-blue_bar:{
-  backgroundColor: "#6e07f3",
-  height: "650px",
-},
-
-// >>>>>>>>>>>>>>>>>>      blue_bar_content        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-blue_bar_content:{
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  position: "relative",
-  top: "50%",
-  transform: "translateY(-50%)",
-'& h1': {
-  color: "white",
-  fontSize: "200%",  },
-'& p': {
-    color: "white",
+  heading: {
+    backgroundColor: "white",
     textAlign: "center",
-    width: "62%",
-    fontSize: "21px",
   },
-  '@media screen and (max-width: 454px)': {
-    '& h1':{
-      textAlign:"center",
+  h3: {
+    fontSize: "2.5rem",
+  },
+  h: {
+    fontSize: "1.2rem",
+  },
+
+  //  Images    
+  imgs: {
+    backgroundColor: "white",
+  },
+  img: {
+    margin: "0 auto",
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "900px",
+    height: "auto",
+  },
+  img1: {
+    textAlign: "center",
+    width: "400px",
+    height: "auto",
+    maxWidth: "100%",
+  },
+  img2: {
+    height: "auto",
+    maxWidth: "100%",
+  },
+
+  //  Blue bar     
+
+  blue_bar: {
+    backgroundColor: "#6e07f3",
+    height: "650px",
+  },
+
+  // blue_bar_content       
+
+  blue_bar_content: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    top: "50%",
+    transform: "translateY(-50%)",
+    '& h1': {
+      color: "white",
+      fontSize: "200%",
     },
-    '& p':{
-      fontSize:"115%",
+    '& p': {
+      color: "white",
+      textAlign: "center",
+      width: "62%",
+      fontSize: "21px",
     },
-},
-},
+    '@media screen and (max-width: 454px)': {
+      '& h1': {
+        textAlign: "center",
+      },
+      '& p': {
+        fontSize: "115%",
+      },
+    },
+  },
 });
 
 function Header() {
@@ -86,7 +87,7 @@ function Header() {
 
 
   return (
-    <div style={{backgroundColor:"white"}}><><><><div>
+    <div style={{ backgroundColor: "white" }}><><><><div>
       <Head>
         <title>Home-Hashtag404</title>
         <meta
@@ -97,7 +98,7 @@ function Header() {
 
     </div><>
 
-{/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+        {/*  Header  */}
 
         <div className={classes.heading}>
           <h3 className={classes.h3}>
@@ -109,7 +110,7 @@ function Header() {
           </h>
         </div>
 
-        {/* // >>>>>>>>>>>>>>>   Images    >>>>>>>>>>>> */}
+        {/* Images    */}
         <div className={classes.imgs}>
           <div className={classes.img}>
             <Image className={classes.img1}
@@ -119,11 +120,11 @@ function Header() {
           </div>
         </div>
       </></>
-      {/* >>>>>>>>>>>>    Blue bar         >>>>>>>>>>>>>>>>>>>>>>> */}
+      {/* Blue bar */}
       <div className={classes.blue_bar}>
         <div className={classes.blue_bar_content}>
-        <div className={classes.blue_bar_container}>
-        </div>
+          <div className={classes.blue_bar_container}>
+          </div>
           <h1>Hi, I’m Matt. Nice to meet you.</h1>
           <p>
             Since beginning my journey as a freelance designer over 11 years
@@ -134,9 +135,9 @@ function Header() {
             one design problem at a time.
           </p>
         </div>
-    </div>
+      </div>
     </></>
-</div>
+    </div>
   );
 }
 
