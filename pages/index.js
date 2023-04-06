@@ -1,3 +1,4 @@
+// import Footer from '@/component/footer';
 import Head from 'next/head';
 // import React from 'react';
 import Navbar from "../src/layouts/Navbar";
