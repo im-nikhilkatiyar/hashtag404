@@ -22,8 +22,8 @@ export default function Home() {
       <Containerbox />
       <Conversation />
       <div>
-        {/* <Testimonial/>
-        <BotttomBanner /> */}
+        {/* {/* <Testimonial/> */}
+        {/* <BotttomBanner /> */}
       </div>
       {/* <Footer /> */}
     </div>
