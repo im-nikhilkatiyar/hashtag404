@@ -80,7 +80,7 @@ function Header() {
 
   return (
     <div style={{ backgroundColor: "white" }}><><><><div>
-      <h1>Home-Hashtag404</h1>
+      <title>Home-Hashtag404</title>
     </div><>
         <div className={classes.heading}>
           <h3 className={classes.h3}>

@@ -10,7 +10,9 @@ const useStyles = makeStyles({
   interest: {
     backgroundColor: "white",
     textAlign: "center",
-    margin: "150px 10px",
+    height: "30%",
+    paddingTop: "122px",
+    paddingBottom: "122px",
     textAlign: "-webkit-center",
 
     '& p': {

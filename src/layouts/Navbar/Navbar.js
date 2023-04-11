@@ -182,7 +182,7 @@ function NavBarContainer() {
   return (
     <div style={{ backgroundColor: 'white' }}>
       <div>
-        <h1>Home-Hashtag404</h1>
+        <title>Home-Hashtag404</title>
         <nav>
           <div className={classes.navbar_back}>
             <div className={classes.navbar}>
