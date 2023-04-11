@@ -4,7 +4,7 @@ import { TfiTwitterAlt, TfiDribbble, TfiLinkedin } from 'react-icons/tfi';
 
 // icons import from react library
 import { TbBrandProducthunt } from 'react-icons/tb';
-import { SlEnvolope } from  'react-icons/sl';
+import { SlEnvolope } from 'react-icons/sl';
 import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import { CgIndieHackers } from 'react-icons/cg';
 import { makeStyles } from '@mui/styles';

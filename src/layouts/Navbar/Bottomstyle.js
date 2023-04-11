@@ -43,15 +43,7 @@ function Bottomstyle() {
   const classes = useStyles();
   return (
     <div style={{ backgroundColor: "white" }}>
-      <Head>
-        <title>Home-Hashtag404</title>
-        <meta
-          name="description"
-          content="Meta description for the Home page THIS IS AS HOME PAGE" />
-        <meta name="keywords" content="test1, test2, ssr, nextjs" />
-      </Head>
       {/*   Interested */}
-
       <div className={classes.interest}>
         <h2>Interested in collaborating with me?</h2>
         <p>I’m always open to discussing product design work or partnership opportunities.</p>
