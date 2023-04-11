@@ -95,7 +95,6 @@ const useStyles = makeStyles({
     objectFit: "cover",
     marginBottom: -10,
   },
-
   designer_things: {
     fontSize: 16,
     "& p": {
@@ -107,7 +106,6 @@ const useStyles = makeStyles({
       padding: "0px",
       listStyle: "none",
     },
-
     textDecoration: "none",
     listStyle: "none",
   },
@@ -145,11 +143,6 @@ function Containerbox() {
       <>
         <>
           <div>
-            <Head>
-              <title>Home-Hashtag404</title>
-            </Head>
-
-            {/* Container*/}
           </div>
         </>
         <div className={classes.containerback}>

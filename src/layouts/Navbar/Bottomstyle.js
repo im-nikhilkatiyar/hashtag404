@@ -43,7 +43,6 @@ function Bottomstyle() {
   const classes = useStyles();
   return (
     <div style={{ backgroundColor: "white" }}>
-      {/*   Interested */}
       <div className={classes.interest}>
         <h2>Interested in collaborating with me?</h2>
         <p>I’m always open to discussing product design work or partnership opportunities.</p>

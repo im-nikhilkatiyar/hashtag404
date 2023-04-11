@@ -29,10 +29,8 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'flex-start',
     padding: '20px',
-
     '@media screen and (max-width: 1080px)': {
       display: 'flex',
-
       '& #icon': {
         display: 'none',
         '@media screen and (max-width: 680px)': {
@@ -50,7 +48,6 @@ const useStyles = makeStyles({
     '& a': {
       textDecoration: 'none',
     },
-
     // nav list
     '& > div:nth-child(2)': {
       width: '70px',
@@ -83,7 +80,6 @@ const useStyles = makeStyles({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-
       margin: '10px',
       backgroundColor: 'white',
       fontSize: '2ch',
@@ -97,9 +93,7 @@ const useStyles = makeStyles({
         color: '#6E07F3', // set text color to #6E07F3 on hover
       },
     },
-
     //nav list1    
-
     '& > div:nth-child(2)': {
       marginRight: 'auto',
       maxWidth: '1440px',
@@ -156,8 +150,7 @@ function NavBarContainer() {
       }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
+      onKeyDown={toggleDrawer(anchor, false)}>
       <List>
         {['Mentorship', 'Say Hello'].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -189,15 +182,7 @@ function NavBarContainer() {
   return (
     <div style={{ backgroundColor: 'white' }}>
       <div>
-        <Head>
-          <title>Home-Hashtag404</title>
-          <meta
-            name="description"
-            content="Meta description for the Home page THIS IS AS HOME PAGE"
-          />
-          <meta name="keywords" content="test1, test2, ssr, nextjs" />
-        </Head>
-        {/* // Navbar     */}
+        <h1>Home-Hashtag404</h1>
         <nav>
           <div className={classes.navbar_back}>
             <div className={classes.navbar}>
@@ -228,8 +213,6 @@ function NavBarContainer() {
         </nav>
       </div>
       <>
-        {/*Navbar_btn */}
-
         <div className={classes.Navbar_btn}>
           <React.Fragment key="top">
             <Button onClick={toggleDrawer('top', true)}>
@@ -238,8 +221,7 @@ function NavBarContainer() {
             <Drawer
               anchor="top"
               open={state.top}
-              onClose={toggleDrawer('top', false)}
-            >
+              onClose={toggleDrawer('top', false)}>
               {list('top')}
             </Drawer>
           </React.Fragment>

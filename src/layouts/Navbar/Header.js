@@ -7,10 +7,8 @@ import { makeStyles } from "@mui/styles";
 import mf_avatar from "../../../assets/mf_avatar.jpg";
 import computer from "../../../assets/computer.JPG";
 
-
 const useStyles = makeStyles({
   //   Header 
-
   heading: {
     backgroundColor: "white",
     textAlign: "center",
@@ -21,7 +19,6 @@ const useStyles = makeStyles({
   h: {
     fontSize: "1.2rem",
   },
-
   //  Images    
   imgs: {
     backgroundColor: "white",
@@ -43,16 +40,12 @@ const useStyles = makeStyles({
     height: "auto",
     maxWidth: "100%",
   },
-
   //  Blue bar     
-
   blue_bar: {
     backgroundColor: "#6e07f3",
     height: "650px",
   },
-
   // blue_bar_content       
-
   blue_bar_content: {
     display: "flex",
     flexDirection: "column",
@@ -85,26 +78,14 @@ const useStyles = makeStyles({
 function Header() {
   const classes = useStyles();
 
-
   return (
     <div style={{ backgroundColor: "white" }}><><><><div>
-      <Head>
-        <title>Home-Hashtag404</title>
-        <meta
-          name="description"
-          content="Meta description for the Home page THIS IS AS HOME PAGE" />
-        <meta name="keywords" content="test1, test2, ssr, nextjs" />
-      </Head>
-
+      <h1>Home-Hashtag404</h1>
     </div><>
-
-        {/*  Header  */}
-
         <div className={classes.heading}>
           <h3 className={classes.h3}>
             Designer, Frontend Developer & Mentor
           </h3>
-
           <h className={classes.h}>
             I design and code beautifully simple things, and I love what I do.
           </h>
