@@ -42,7 +42,7 @@ const useStyles = makeStyles({
       },
     },
     '& > div:nth-child(1)': {
-      width: '70px',
+      width: '190px',
       marginLeft: '5%',
     },
     '& a': {
@@ -188,7 +188,7 @@ function NavBarContainer() {
             <div className={classes.navbar}>
               <div className={classes.img404}>
                 <Link href="/">
-                  <Image src={hashtag} width={80} height={40} />
+                  <Image src={hashtag} />
                 </Link>
               </div>
               <div />

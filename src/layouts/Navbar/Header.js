@@ -104,8 +104,6 @@ function Header() {
       {/* Blue bar */}
       <div className={classes.blue_bar}>
         <div className={classes.blue_bar_content}>
-          <div className={classes.blue_bar_container}>
-          </div>
           <h1>Hi, I’m Matt. Nice to meet you.</h1>
           <p>
             Since beginning my journey as a freelance designer over 11 years
