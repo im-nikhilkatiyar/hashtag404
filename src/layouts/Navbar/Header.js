@@ -79,7 +79,7 @@ function Header() {
   const classes = useStyles();
 
   return (
-    <div style={{ backgroundColor: "white" }}><><><><div>
+    <div><><><><div>
       <title>Home-Hashtag404</title>
     </div><>
         <div className={classes.heading}>
