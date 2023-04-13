@@ -59,6 +59,7 @@ const useStyles = makeStyles({
       fontSize: "200%",
     },
     '& p': {
+      paddingTop: "10px",
       color: "white",
       textAlign: "center",
       width: "62%",

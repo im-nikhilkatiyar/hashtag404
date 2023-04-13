@@ -3,10 +3,9 @@ import Navbar from "../src/layouts/Navbar/Navbar";
 import Testimonial from '../src/layouts/Testimonial';
 import BotttomBanner from '../src/layouts/BotttomBanner';
 import Footer from '../src/layouts/Footer/Footer';
-import { Container } from '@mui/system';
-import Conversation from '../src/layouts/Navbar/Bottomstyle';
 import Containerbox from '../src/layouts/Navbar/Containerbox';
 import Header from "../src/layouts/Navbar/Header";
+import Bottomstyle from '../src/layouts/Navbar/Bottomstyle';
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Containerbox />
-      <Conversation />
+      <Bottomstyle />
       <Testimonial />
       <BotttomBanner />
       <Footer />
