@@ -177,7 +177,7 @@ const useStyles = makeStyles(() => ({
         },
     },
     iconStyle: {
-        height: '30px',  width: '25px',
+        height: '30px', width: '25px',
     },
     textContainer: {
         color: 'white',
