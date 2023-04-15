@@ -28,7 +28,7 @@ import three from "../../../assets/three.jpg";
 
 const useStyles = makeStyles({
 
-  hash_navbar:{
+  hash_navbar: {
     backgroundColor: '#fff',
   },
 
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     margin: "auto",
     display: "flex",
     justifyContent: "flex-start",
-    padding:"20px",
+    padding: "20px",
 
     "@media screen and (max-width: 1080px)": {
       display: "flex",
@@ -67,13 +67,13 @@ const useStyles = makeStyles({
     },
   },
   Dot_dot: {
-    display:"none",
+    display: "none",
     "@media screen and (max-width: 1080px)": {
-      textAlign:"center",
-      display:"block",
-      marginLeft:"90%",
-      position:"absolute",
-      top:"1.5%",
+      textAlign: "center",
+      display: "block",
+      marginLeft: "90%",
+      position: "absolute",
+      top: "1.5%",
     },
   },
   div3: {
@@ -82,7 +82,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-around",
     "@media screen and (max-width: 1080px)": {
-      display:"none",
+      display: "none",
     },
     "& > div:nth-child(1)": {
       marginRight: "auto",
@@ -133,246 +133,247 @@ const useStyles = makeStyles({
       },
     },
   },
- 
-//  >>>>>>>>>>>>>>>>>> Header >>>>>>>>>>>>>>>>>>>>
 
-hashtag_heading:{
-  backgroundColor:"white",
-  textAlign:"center",
-},
-h3:{
-  fontSize: "2.5rem",
-},
-h:{
-  fontSize: "1.2rem",
-},
+  //  >>>>>>>>>>>>>>>>>> Header >>>>>>>>>>>>>>>>>>>>
 
-// >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-imgs:{
-backgroundColor:"white",
-},
-img:{
-  margin: "0 auto",
-  textAlign:"center",
-  width: "100%",
-  maxWidth: "900px",
-  height: "auto",
-},
-img1:{
-  textAlign:"center",
-  width: "400px",
-  height: "auto",
-  maxWidth:"100%",
-},
-img2:{
-  height:"auto",
-  maxWidth:"100%",
-},
-
-// >>>>>>>>>>>>>>>>>>    Blue bar      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-blue_bar:{
-  backgroundColor: "#6e07f3",
-  height: "650px",
-},
-
-// >>>>>>>>>>>>>>>>>>      blue_bar_content        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-blue_bar_content:{
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  position: "relative",
-  top: "50%",
-  transform: "translateY(-50%)",
-'& h1': {
-  color: "white",
-  fontSize: "200%",  },
-'& p': {
-    color: "white",
+  hashtag_heading: {
+    backgroundColor: "white",
     textAlign: "center",
-    width: "62%",
-    fontSize: "21px",
   },
-  '@media screen and (max-width: 454px)': {
-    '& h1':{
-      textAlign:"center",
+  h3: {
+    fontSize: "2.5rem",
+  },
+  h: {
+    fontSize: "1.2rem",
+  },
+
+  // >>>>>>>>>>>>>>>>>  Images    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  imgs: {
+    backgroundColor: "white",
+  },
+  img: {
+    margin: "0 auto",
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "900px",
+    height: "auto",
+  },
+  img1: {
+    textAlign: "center",
+    width: "400px",
+    height: "auto",
+    maxWidth: "100%",
+  },
+  img2: {
+    height: "auto",
+    maxWidth: "100%",
+  },
+
+  // >>>>>>>>>>>>>>>>>>    Blue bar      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  blue_bar: {
+    backgroundColor: "#6e07f3",
+    height: "650px",
+  },
+
+  // >>>>>>>>>>>>>>>>>>      blue_bar_content        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  blue_bar_content: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    top: "50%",
+    transform: "translateY(-50%)",
+    '& h1': {
+      color: "white",
+      fontSize: "200%",
     },
-    '& p':{
-      fontSize:"115%",
+    '& p': {
+      color: "white",
+      textAlign: "center",
+      width: "62%",
+      fontSize: "21px",
     },
-},
-},   
+    '@media screen and (max-width: 454px)': {
+      '& h1': {
+        textAlign: "center",
+      },
+      '& p': {
+        fontSize: "115%",
+      },
+    },
+  },
 
-// >>>>>>>>>>>>>>   Bluebar-Container     >>>>>>>>>>>>>>>>>>>>>>>
+  // >>>>>>>>>>>>>>   Bluebar-Container     >>>>>>>>>>>>>>>>>>>>>>>
 
 
-// >>>>>>>>>>>>>>>>>>   Container   >>>>>>>>>>>>>>>>
-containerback:{
-    backgroundColor:"white",
-    padding:"1px",
-}, 
-container:{
-    backgroundColor:"white",
+  // >>>>>>>>>>>>>>>>>>   Container   >>>>>>>>>>>>>>>>
+  containerback: {
+    backgroundColor: "white",
+    padding: "1px",
+  },
+  container: {
+    backgroundColor: "white",
     maxWidth: '1080px',
-    margin:"-60px auto",
+    margin: "-60px auto",
     display: 'flex',
     justifyContent: 'space-around',
     padding: '0px',
-    backgroundColor:"white",
-    borderRadius:"20px",
-  
+    backgroundColor: "white",
+    borderRadius: "20px",
+
     '@media screen and (max-width: 850px)': {
-        flexDirection: 'column',
-        alignItems: 'center',
-        margin:"-60px auto",
-    '& > div': {
-    
-      borderRadius: "20px 20px 20px 20px",
-    }
+      flexDirection: 'column',
+      alignItems: 'center',
+      margin: "-60px auto",
+      '& > div': {
+
+        borderRadius: "20px 20px 20px 20px",
+      }
     },
     '& > div': {
-        
-        maxWidth: '500px',
-        minWidth: '350px',
-        height: '830px',
-        margin: '2px',
-        width: '100%',
-        '@media screen and (max-width: 1070px)': {
-            minWidth: '280px',
-            height: '930px',
-            maxWidth: '400px',
-        },
-        boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+
+      maxWidth: '500px',
+      minWidth: '350px',
+      height: '830px',
+      margin: '2px',
+      width: '100%',
+      '@media screen and (max-width: 1070px)': {
+        minWidth: '280px',
+        height: '930px',
+        maxWidth: '400px',
+      },
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
       border: "0.5px solid brown",
     },
     "& > div:nth-child(1)": {
-     textAlign:"center",
-     fontSize:"x-large",
-     borderRadius: "20px 0px 0px 20px",
-     
-     '@media screen and (max-width: 850px)': {
-      borderRadius:"0px 0px",
-      },
-       
-    },"& > div:nth-child(2)": {
-        textAlign:"center",
-        fontSize:"x-large",
-        borderRadius: "0px 0px",
+      textAlign: "center",
+      fontSize: "x-large",
+      borderRadius: "20px 0px 0px 20px",
 
-       },"& > div:nth-child(3)": {
-        textAlign:"center",
-        fontSize:"x-large",
-        borderRadius: " 0px 20px 20px 0px",
-        
-        '@media screen and (max-width: 850px)': {
-          borderRadius:"0px 0px",
-          },
-       },
-       '& li':{
-    textDecoration:"none",
-    listStyle:"none",
-       },
-       
-   },
-   designer_img: {
+      '@media screen and (max-width: 850px)': {
+        borderRadius: "0px 0px",
+      },
+
+    }, "& > div:nth-child(2)": {
+      textAlign: "center",
+      fontSize: "x-large",
+      borderRadius: "0px 0px",
+
+    }, "& > div:nth-child(3)": {
+      textAlign: "center",
+      fontSize: "x-large",
+      borderRadius: " 0px 20px 20px 0px",
+
+      '@media screen and (max-width: 850px)': {
+        borderRadius: "0px 0px",
+      },
+    },
+    '& li': {
+      textDecoration: "none",
+      listStyle: "none",
+    },
+
+  },
+  designer_img: {
     width: "25%",
-    height:"10%",
+    height: "10%",
     borderRadius: '50%',
     objectFit: 'cover',
     marginRight: 20,
   },
   frontend_img: {
     width: "23%",
-    height:"10%",
+    height: "10%",
     borderRadius: '50%',
     objectFit: 'cover',
     marginRight: 20,
   },
   img_mentor: {
     width: "30%",
-    height:"10%",
+    height: "10%",
     borderRadius: '50%',
     objectFit: 'cover',
     marginBottom: -10,
   },
 
-designer_things:{
-    fontSize:16,
-    '& p':{
-      padding:"10px 10px",
-      fontSize:18,
-      margin:"22px",
+  designer_things: {
+    fontSize: 16,
+    '& p': {
+      padding: "10px 10px",
+      fontSize: 18,
+      margin: "22px",
     },
-    '& ul':{
-        padding:"0px",
-        listStyle:"none",
-     },
-     
-    textDecoration:"none",
-    listStyle:"none",
-},
-frontend_div2:{
-    fontSize:16,
-  '& p':{
-    fontSize:18,
-    padding:"10px 10px",
-    margin:"20px",
-  },
-  '& ul':{
-    padding:"0px",
-    listStyle:"none",
- },
-},
-mentor_div2:{
-    fontSize:16,
-  '& p':{
-    fontSize:18,
-    padding:"10px 10px",
-    margin:"22px",
-  },
-  '& ul':{
-    padding:"0px",
-    listStyle:"none",
- },
-},
+    '& ul': {
+      padding: "0px",
+      listStyle: "none",
+    },
 
- // >>>>>>>>>>>>>>>  Interested  >>>>>>>>>>>>>>>>>>>>>>>>>>
+    textDecoration: "none",
+    listStyle: "none",
+  },
+  frontend_div2: {
+    fontSize: 16,
+    '& p': {
+      fontSize: 18,
+      padding: "10px 10px",
+      margin: "20px",
+    },
+    '& ul': {
+      padding: "0px",
+      listStyle: "none",
+    },
+  },
+  mentor_div2: {
+    fontSize: 16,
+    '& p': {
+      fontSize: 18,
+      padding: "10px 10px",
+      margin: "22px",
+    },
+    '& ul': {
+      padding: "0px",
+      listStyle: "none",
+    },
+  },
 
- interest_hash:{
-  backgroundColor:"white",
-  textAlign: "center",
-  margin:"150px 10px",
-  textAlign: "-webkit-center",
-  
-  '& p':{
+  // >>>>>>>>>>>>>>>  Interested  >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  interest_hash: {
+    backgroundColor: "white",
+    textAlign: "center",
+    margin: "150px 10px",
+    textAlign: "-webkit-center",
+
+    '& p': {
       fontSize: "20px",
-      margin:"40px",
-  },
-  '& .MuiSvgIcon-root': {
+      margin: "40px",
+    },
+    '& .MuiSvgIcon-root': {
       width: '60px',
       textAlign: "center",
-      alignItems:"center",
+      alignItems: "center",
       height: "25px",
-      margin:"-9px",
-      
-  }
-},
-start: {
-  color: "#6e07f3",
-  border:"2px solid #6e07f3",
-  borderRadius:"35px",
-  maxWidth:"250px",
-  height:"40px",
-  padding:"10px",
-  
-  "&:hover": {
-  backgroundColor: "#6e07f3",
-  color:"white",
-},
+      margin: "-9px",
 
-},
+    }
+  },
+  start: {
+    color: "#6e07f3",
+    border: "2px solid #6e07f3",
+    borderRadius: "35px",
+    maxWidth: "250px",
+    height: "40px",
+    padding: "10px",
+
+    "&:hover": {
+      backgroundColor: "#6e07f3",
+      color: "white",
+    },
+
+  },
 
 });
 
@@ -433,7 +434,7 @@ function NavBarContainer() {
   );
 
   return (
-    <div style={{backgroundColor:"white"}}><><><><div>
+    <div style={{ backgroundColor: "white" }}><><><><div>
       <Head>
         <title>Home-Hashtag404</title>
         <meta
@@ -472,23 +473,23 @@ function NavBarContainer() {
         </div>
       </nav>
     </div><>
-{/* >>>>>>>>>>>>>>>>>>>>>  Dot_dot   >>>>>>>>>>>>>>>>>> */}
+        {/* >>>>>>>>>>>>>>>>>>>>>  Dot_dot   >>>>>>>>>>>>>>>>>> */}
 
- 
-<div className={classes.Dot_dot}>
-      <React.Fragment key="top">
-        <Button onClick={toggleDrawer('top', true)}><MenuOpenIcon/></Button>
-        <Drawer
-          anchor="top"
-          open={state['top']}
-          onClose={toggleDrawer('top', false)}
-        >
-          {list('top')}
-        </Drawer>
-      </React.Fragment>
-    </div>
 
-{/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+        <div className={classes.Dot_dot}>
+          <React.Fragment key="top">
+            <Button onClick={toggleDrawer('top', true)}><MenuOpenIcon /></Button>
+            <Drawer
+              anchor="top"
+              open={state['top']}
+              onClose={toggleDrawer('top', false)}
+            >
+              {list('top')}
+            </Drawer>
+          </React.Fragment>
+        </div>
+
+        {/* >>>>>>>>>>      Header           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
         <div className={classes.hashtag_heading}>
           <h3 className={classes.h3}>
@@ -513,10 +514,10 @@ function NavBarContainer() {
       {/* >>>>>>>>>>>>    Blue bar         >>>>>>>>>>>>>>>>>>>>>>> */}
       <div className={classes.blue_bar}>
         <div className={classes.blue_bar_content}>
-          
-        <div className={classes.blue_bar_container}>
 
-        </div>
+          <div className={classes.blue_bar_container}>
+
+          </div>
           <h1>Hi, I’m Matt. Nice to meet you.</h1>
           <p>
             Since beginning my journey as a freelance designer over 11 years
@@ -528,81 +529,81 @@ function NavBarContainer() {
           </p>
         </div>
 
-{/* >>>>>>>>>>>>>>>>>    Blue - Container   >>>>>>>>>>> */}
+        {/* >>>>>>>>>>>>>>>>>    Blue - Container   >>>>>>>>>>> */}
 
 
         {/* >>>>>>>>>>>>  Container  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
       </div></><div className={classes.containerback}>
         <div className={classes.container}>
-        <div>
-          <ul>
-            <Image src={one} className={classes.designer_img} />
-            <li>
-              <p style={{ fontWeight: "bold" }}>
-                Designer
-              </p>
-              <div className={classes.designer_things}>
-                <p>
-                  I value simple content structure, clean design patterns, and
-                  thoughtful interactions.
+          <div>
+            <ul>
+              <Image src={one} className={classes.designer_img} />
+              <li>
+                <p style={{ fontWeight: "bold" }}>
+                  Designer
                 </p>
-                <p style={{ color: "blue" }}>Things I enjoy designing:</p>
-                <p>UX, UI, Web, Apps, Logos</p>
-                <p style={{ color: "blue" }}>Design Tools:</p>
-                <ul>
-                  <li />Affinity Designer<br /><li /><br /> Figma<li /><br /> Font Awesome<li /><br /> Pen & Paper<li /><br /> Sketch<li /><br />
-                  Webflow
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <Image src={two} className={classes.frontend_img} />
-            <li>
-              <p style={{ fontWeight: "bold" }}>
-                Frontend Developer
-              </p>
-              <div className={classes.frontend_div2}>
-                <p>
-                  I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                <div className={classes.designer_things}>
+                  <p>
+                    I value simple content structure, clean design patterns, and
+                    thoughtful interactions.
+                  </p>
+                  <p style={{ color: "blue" }}>Things I enjoy designing:</p>
+                  <p>UX, UI, Web, Apps, Logos</p>
+                  <p style={{ color: "blue" }}>Design Tools:</p>
+                  <ul>
+                    <li />Affinity Designer<br /><li /><br /> Figma<li /><br /> Font Awesome<li /><br /> Pen & Paper<li /><br /> Sketch<li /><br />
+                    Webflow
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <Image src={two} className={classes.frontend_img} />
+              <li>
+                <p style={{ fontWeight: "bold" }}>
+                  Frontend Developer
                 </p>
-                <p style={{ color: "blue" }}>TLanguages I speak:</p>
-                <p>HTML, Pug, Slim, CSS, Sass, Git</p>
-                <p style={{ color: "blue" }}><br />Dev Tools:</p>
-                <ul>
-                  Atom<li /><br />Bitbucket<li /><br />Bootstraul<li /><br />Bulma<li /><br />Codekit<li /><br />Github<li /><br />Surge<li /><br />Terminal<li /><br />Vercel
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <Image src={three} className={classes.img_mentor} />
-            <li>
-              <p style={{ fontWeight: "bold" }}>
-                Mentor
-              </p>
-              <div className={classes.mentor_div2}>
-                <p>I genuinely care about people, and love helping fellow designers work on their craft.</p>
-                <p style={{ color: "blue" }}>Experiences I draw from:</p>
-                <p>UX/UI, Product design, Freelancing</p>
-                <p style={{ color: "blue" }}>Mentor Stats:</p>
-                <ul>
-                  7 years experience<li /><br />26 short courses<li /><br />65 bootcamps<li /><br />200+ students<li /><br />2,350+ mentor sessions<li /><br />60+ group critiques<li /><br />16,500+ comments
-                </ul>
-              </div>
-            </li>
-          </ul>
+                <div className={classes.frontend_div2}>
+                  <p>
+                    I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                  </p>
+                  <p style={{ color: "blue" }}>TLanguages I speak:</p>
+                  <p>HTML, Pug, Slim, CSS, Sass, Git</p>
+                  <p style={{ color: "blue" }}><br />Dev Tools:</p>
+                  <ul>
+                    Atom<li /><br />Bitbucket<li /><br />Bootstraul<li /><br />Bulma<li /><br />Codekit<li /><br />Github<li /><br />Surge<li /><br />Terminal<li /><br />Vercel
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <Image src={three} className={classes.img_mentor} />
+              <li>
+                <p style={{ fontWeight: "bold" }}>
+                  Mentor
+                </p>
+                <div className={classes.mentor_div2}>
+                  <p>I genuinely care about people, and love helping fellow designers work on their craft.</p>
+                  <p style={{ color: "blue" }}>Experiences I draw from:</p>
+                  <p>UX/UI, Product design, Freelancing</p>
+                  <p style={{ color: "blue" }}>Mentor Stats:</p>
+                  <ul>
+                    7 years experience<li /><br />26 short courses<li /><br />65 bootcamps<li /><br />200+ students<li /><br />2,350+ mentor sessions<li /><br />60+ group critiques<li /><br />16,500+ comments
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      </div>
-      </>
+    </>
 
- {/* >>>>>>>>>>>>>>>     Interested       >>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+      {/* >>>>>>>>>>>>>>>     Interested       >>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
       <div className={classes.interest_hash}>
         <h2>Interested in collaborating with me?</h2>
@@ -610,8 +611,8 @@ function NavBarContainer() {
         <div className={classes.start}>
           <div id='icon'><Link href="/start">
             <span>
-            <MessageIcon/>
-            Start a conversation
+              <MessageIcon />
+              Start a conversation
             </span>
           </Link>
           </div>
