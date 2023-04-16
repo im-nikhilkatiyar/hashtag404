@@ -10,14 +10,22 @@ import computer from "../../../assets/computer.JPG";
 const useStyles = makeStyles({
   //   Header 
   heading: {
+    padding: "70px",
     backgroundColor: "white",
     textAlign: "center",
+    fontFamily: ' "eurostile", sans-serif',
   },
   h3: {
-    fontSize: "2.5rem",
+    fontSize: "3.2rem",
+    margin: "20px 10px",
+    '@media screen and (max-width: 290px)': {
+      margin: "10px -22px",
+    }
   },
   h: {
-    fontSize: "1.2rem",
+    fontSize: "1.7rem",
+    lineHeight: "30px",
+    fontFamily: ' "eurostile", sans-serif',
   },
   //  Images    
   imgs: {
@@ -32,18 +40,25 @@ const useStyles = makeStyles({
   },
   img1: {
     textAlign: "center",
-    width: "400px",
+    width: "370px",
     height: "auto",
     maxWidth: "100%",
+    margin: "0 auto",
+    marginTop: "-30px",
   },
   img2: {
     height: "auto",
     maxWidth: "100%",
+    width: "100%",
   },
   //  Blue bar     
   blue_bar: {
     backgroundColor: "#6e07f3",
-    height: "650px",
+    height: "620px",
+    marginTop: "-4px",
+    '@media screen and (max-width: 400px)': {
+      height: "730px",
+    },
   },
   // blue_bar_content       
   blue_bar_content: {
@@ -52,18 +67,21 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
-    top: "50%",
+    top: "45%",
     transform: "translateY(-50%)",
     '& h1': {
       color: "white",
       fontSize: "200%",
+      fontFamily: ' "eurostile", sans-serif',
     },
     '& p': {
-      paddingTop: "10px",
+      paddingTop: "17px",
       color: "white",
       textAlign: "center",
       width: "62%",
-      fontSize: "21px",
+      fontSize: "22px",
+      lineHeight: "1.3",
+      fontFamily: ' "eurostile", sans-serif',
     },
     '@media screen and (max-width: 454px)': {
       '& h1': {
@@ -95,10 +113,8 @@ function Header() {
         {/* Images    */}
         <div className={classes.imgs}>
           <div className={classes.img}>
-            <Image className={classes.img1}
-              src={mf_avatar} />
-            <Image className={classes.img2}
-              src={computer} />
+            <div className={classes.img1}><Image src={mf_avatar} /></div>
+            <div className={classes.img2}><Image src={computer} /></div>
           </div>
         </div>
       </></>
