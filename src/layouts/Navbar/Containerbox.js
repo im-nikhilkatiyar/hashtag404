@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { makeStyles } from "@mui/styles";
 
@@ -16,57 +15,78 @@ const useStyles = makeStyles({
   },
   container: {
     backgroundColor: "white",
-    maxWidth: "1080px",
-    margin: "-60px auto",
+    maxWidth: "1330px",
+    margin: "-160px auto",
     display: "flex",
     justifyContent: "space-around",
     padding: "0px",
     backgroundColor: "white",
     borderRadius: "20px",
-
+    paddingBottom: "110px",
     "@media screen and (max-width: 850px)": {
       flexDirection: "column",
       alignItems: "center",
-      margin: "-60px auto",
-      "& > div": {
-        borderRadius: "20px 20px 20px 20px",
-      },
+      margin: "-100px 50px",
     },
     "& > div": {
       maxWidth: "500px",
       minWidth: "350px",
-      height: "830px",
-      margin: "2px",
+      height: "930px",
+      margin: "1px",
       width: "100%",
+      boxShadow: "0 0 2px #d4d1d1",
+      border: "0px solid #d4d1d1",
+      boxShadow: "0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 0.1px #E6ECF8",
       "@media screen and (max-width: 1070px)": {
         minWidth: "280px",
         height: "930px",
-        maxWidth: "400px",
+        maxWidth: "900px",
       },
-      boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-      border: "0.5px solid brown",
     },
     "& > div:nth-child(1)": {
       textAlign: "center",
       fontSize: "x-large",
       borderRadius: "20px 0px 0px 20px",
-
       "@media screen and (max-width: 850px)": {
         borderRadius: "0px 0px",
+      },
+      "& > ul": {
+        "& > li": {
+          "& > p": {
+            fontWeight: "bold",
+          },
+        },
       },
     },
     "& > div:nth-child(2)": {
       textAlign: "center",
       fontSize: "x-large",
       borderRadius: "0px 0px",
+      "& > ul": {
+        "& > li": {
+          "& > p": {
+            fontWeight: "bold",
+          },
+        },
+      },
+
     },
     "& > div:nth-child(3)": {
       textAlign: "center",
       fontSize: "x-large",
       borderRadius: " 0px 20px 20px 0px",
-
+      "& > ul": {
+        "& > li": {
+          "& > p": {
+            fontWeight: "bold",
+          },
+        },
+      },
       "@media screen and (max-width: 850px)": {
         borderRadius: "0px 0px",
+      },
+      "& li": {
+        margin: "-2px",
       },
     },
     "& li": {
@@ -76,31 +96,48 @@ const useStyles = makeStyles({
   },
   designer_img: {
     width: "25%",
-    height: "10%",
+    height: "5%",
     borderRadius: "50%",
     objectFit: "cover",
-    marginRight: 20,
+    marginLeft: "37%",
+    marginTop: "50px",
+    marginBottom: "13px"
   },
   frontend_img: {
-    width: "23%",
-    height: "10%",
+    width: "22%",
+    height: "5%",
     borderRadius: "50%",
     objectFit: "cover",
-    marginRight: 20,
+    marginLeft: "36.5%",
+    marginTop: "50px",
+    marginBottom: "13px"
   },
   img_mentor: {
-    width: "30%",
-    height: "10%",
+    width: "29%",
+    height: "5%",
     borderRadius: "50%",
     objectFit: "cover",
-    marginBottom: -10,
+    marginLeft: "34%",
+    marginTop: "43px",
+    marginBottom: "10px"
   },
   designer_things: {
     fontSize: 16,
+    "& > p:nth-child(2)": {
+      color: "#6E07F3",
+      marginBottom: "-40px",
+      "@media screen and (max-width: 961px)": {
+        marginTop: "-30px"
+      },
+    },
+    "& > p:nth-child(4)": {
+      color: "#6E07F3"
+    },
     "& p": {
       padding: "10px 10px",
-      fontSize: 18,
+      fontSize: "18px",
       margin: "22px",
+      lineHeight: "30px"
     },
     "& ul": {
       padding: "0px",
@@ -111,22 +148,44 @@ const useStyles = makeStyles({
   },
   frontend_div2: {
     fontSize: 16,
+    "& > p:nth-child(2)": {
+      margin: "35px",
+      color: "#6E07F3",
+      marginBottom: "-30px"
+    },
+    "& > p:nth-child(4)": {
+      color: "#6E07F3",
+      marginTop: "-15px"
+    },
     "& p": {
-      fontSize: 18,
-      padding: "10px 10px",
+      fontSize: "18px",
+      padding: "5px 10px",
       margin: "20px",
+      lineHeight: "30px"
     },
     "& ul": {
       padding: "0px",
       listStyle: "none",
+      lineHeight: "18px"
     },
   },
   mentor_div2: {
     fontSize: 16,
+    "& > p:nth-child(2)": {
+      color: "#6E07F3",
+      marginBottom: "-40px"
+    },
+    "& > p:nth-child(4)": {
+      color: "#6E07F3"
+    },
+    "& > p:nth-child(1)": {
+      margin: "8px",
+    },
     "& p": {
-      fontSize: 18,
+      fontSize: "18px",
       padding: "10px 10px",
       margin: "22px",
+      lineHeight: "30px"
     },
     "& ul": {
       padding: "0px",
@@ -139,7 +198,7 @@ function Containerbox() {
   const classes = useStyles();
 
   return (
-    <div style={{ backgroundColor: "white" }}>
+    <div>
       <>
         <>
           <div>
@@ -149,17 +208,17 @@ function Containerbox() {
           <div className={classes.container}>
             <div>
               <ul>
-                <Image src={one} className={classes.designer_img} />
+                <div className={classes.designer_img} ><Image src={one} /></div>
                 <li>
-                  <p style={{ fontWeight: "bold" }}>Designer</p>
+                  <p>Designer</p>
                   <div className={classes.designer_things}>
                     <p>
                       I value simple content structure, clean design patterns,
                       and thoughtful interactions.
                     </p>
-                    <p style={{ color: "blue" }}>Things I enjoy designing:</p>
+                    <p>Things I enjoy designing:</p>
                     <p>UX, UI, Web, Apps, Logos</p>
-                    <p style={{ color: "blue" }}>Design Tools:</p>
+                    <p>Design Tools:</p>
                     <ul>
                       <li />
                       Affinity Designer
@@ -182,17 +241,17 @@ function Containerbox() {
             </div>
             <div>
               <ul>
-                <Image src={two} className={classes.frontend_img} />
+                <div className={classes.frontend_img} ><Image src={two} /></div>
                 <li>
-                  <p style={{ fontWeight: "bold" }}>Frontend Developer</p>
+                  <p>Frontend Developer</p>
                   <div className={classes.frontend_div2}>
                     <p>
                       I like to code things from scratch, and enjoy bringing
                       ideas to life in the browser.
                     </p>
-                    <p style={{ color: "blue" }}>TLanguages I speak:</p>
+                    <p>Languages I speak:</p>
                     <p>HTML, Pug, Slim, CSS, Sass, Git</p>
-                    <p style={{ color: "blue" }}>
+                    <p>
                       <br />
                       Dev Tools:
                     </p>
@@ -227,19 +286,18 @@ function Containerbox() {
                 </li>
               </ul>
             </div>
-            <div>
-              <ul>
-                <Image src={three} className={classes.img_mentor} />
+            <div className={classes.mentorbox}>
+              <ul><div className={classes.img_mentor} ><Image src={three} /></div>
                 <li>
-                  <p style={{ fontWeight: "bold" }}>Mentor</p>
+                  <p>Mentor</p>
                   <div className={classes.mentor_div2}>
                     <p>
                       I genuinely care about people, and love helping fellow
                       designers work on their craft.
                     </p>
-                    <p style={{ color: "blue" }}>Experiences I draw from:</p>
+                    <p>Experiences I draw from:</p>
                     <p>UX/UI, Product design, Freelancing</p>
-                    <p style={{ color: "blue" }}>Mentor Stats:</p>
+                    <p>Mentor Stats:</p>
                     <ul>
                       7 years experience
                       <li />
@@ -271,5 +329,4 @@ function Containerbox() {
     </div>
   );
 }
-
 export default Containerbox;
