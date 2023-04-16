@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/no-unknown-property */
 import React, { useEffect } from 'react';
 import { TbHandRock } from 'react-icons/tb';
 import { makeStyles } from '@mui/styles';
@@ -9,7 +7,7 @@ const useStyles = makeStyles(() => ({
 
     sectionContainer: {
         backgroundColor: '#6E07F3',
-        height: '230px',
+        height: '200px',
         paddingTop: '5px',
         '@media screen and (max-width:1504px)': {
             height: '200px',
@@ -21,12 +19,12 @@ const useStyles = makeStyles(() => ({
     },
     projectContainer: {
         backgroundColor: '#141c3a',
-        marginRight: '100px',
-        marginLeft: '200px',
-        height: '166px',
+        marginRight: '60px',
+        marginLeft: '60px',
+        height: '176px',
         borderRadius: '12px',
         marginTop: '-5rem',
-        width: '1444px',
+        width: '1644px',
         '@media screen and (max-width:1810px)': {
             width: 'auto',
         },
@@ -47,10 +45,12 @@ const useStyles = makeStyles(() => ({
             marginRight: '5px',
         },
     },
+    Box: {
+        padding: '3.5rem 1.25rem',
+    },
     threeCol: {
         display: 'flex',
         color: 'white',
-        padding: '56px 20px',
         height: '78px',
         width: '1328',
         '@media screen and (max-width:1504px)': {
@@ -71,15 +71,17 @@ const useStyles = makeStyles(() => ({
         fontSize: '32px',
         fontFamily: '"eurostile", sans-serif',
         whiteSpace: 'normal',
-        width: '443px',
+        width: '493px',
         height: '60px',
+        textAlign: 'center',
+        display: 'block',
         '@media screen and (max-width:1504px)': {
             whiteSpace: 'pre',
             fontSize: '28px',
             width: '463px',
             height: '60px',
         },
-        '@media screen and (max-width:915px)':{
+        '@media screen and (max-width:915px)': {
             marginBottom: '10px',
             height: '60px',
             width: 'auto',
@@ -90,16 +92,22 @@ const useStyles = makeStyles(() => ({
             padding: '0px',
         },
     },
+    oneTitle: {
+        fontFamily: '"eurostile", sans-serif',
+        fontWeight: '800',
+        fontSize: '2rem',
+    },
     coltwoContainer: {
         fontFamily: '"europa", sans-serif',
-        fontSize: '18px',
+        fontSize: '20px',
         marginBottom: '0',
-        verticalAlign: 'baseline',
-        width: '443px',
+        width: '493px',
         height: '78px',
         padding: '12px',
         textAlignLast: 'center',
         textAlign: 'justify',
+        display: 'block',
+        lineHeight: '1.8',
         '@media screen and (max-width:1504px)': {
             fontSize: '15px',
             whiteSpace: 'normal',
@@ -119,9 +127,12 @@ const useStyles = makeStyles(() => ({
         height: '55px',
     },
     colthreeContainer: {
-        width: '443px',
-        height: '77px',
+        width: '413px',
+        height: '82px',
         padding: '12px',
+        display: 'block',
+        flexGrow: '1',
+        textAlign: 'center',
         '@media screen and (max-width:915px)': {
             marginBottom: '10px',
             width: 'auto',
@@ -136,19 +147,28 @@ const useStyles = makeStyles(() => ({
             marginLeft: '40px',
         },
         '@media screen and (max-width:630px)': {
-            marginLeft: '30px',
+            marginLeft: '5px',
         },
     },
     buttonSty: {
         transition: 'background-color 1s',
         width: '255px',
         borderRadius: '50px',
-        height: '50px',
+        height: '55px',
         outline: '2px solid #5BE9B9',
-        display: 'flex',
-        marginLeft: '140px',
+        textDecoration: 'none',
+        padding: '1.25em 2em',
+        borderWidth: '2px',
+        backgroundColor: 'transparent',
+        borderColor: '#5BE9B9',
+        fontSize: '1.25rem',
+        position: 'relative',
         '&:hover': {
             backgroundColor: '#5BE9B9',
+            color: 'black',
+            '& $iconContainer, & $textContainer': {
+                color: 'black',
+            },
         },
         '@media screen and (max-width:1504px)': {
             width: '212px',
@@ -159,10 +179,10 @@ const useStyles = makeStyles(() => ({
             height: '48px',
         },
         '@media screen and (max-width:470px)': {
-            marginLeft: '105px',
+            marginLeft: '5px',
         },
         '@media screen and (max-width:405px)': {
-            marginLeft: '55px',
+            marginLeft: '5px',
         },
     },
     iconContainer: {
@@ -177,18 +197,25 @@ const useStyles = makeStyles(() => ({
         },
     },
     iconStyle: {
-        height: '30px', width: '25px',
+        height: '30px',
+        width: '25px',
     },
     textContainer: {
         color: 'white',
         fontWeight: '550px',
         fontSize: '18px',
         transition: 'color 1s',
-        width: '150px',
+        width: '120px',
         height: '30px',
-        textDecorationLine: 'underline',
+        textDecorationLine: 'none',
         '&:hover': {
             color: 'black',
+        },
+    },
+    text: {
+        textTransform: 'lowercase',
+        '&:first-letter': {
+            textTransform: 'uppercase',
         },
     },
 }));
@@ -203,16 +230,20 @@ function BottomBanner() {
     return (
         <div className={classes.sectionContainer}>
             <div className={classes.projectContainer}>
-                <div className={classes.threeCol}>
-                    <div className={classes.coloneContainer}>
-                        <Typography variant="h4" style={{ fontFamily: '"eurostile", sans-serif', paddingLeft: '60px' }}>Start a project</Typography>
-                    </div>
-                    <div className={classes.coltwoContainer}><p calssName={classes.secondPara}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
-                    <div className={classes.colthreeContainer}>
-                        <Button className={classes.buttonSty} href="https://mattfarley.ca/project-planner">
-                            <span className={classes.iconContainer}><TbHandRock className={classes.iconStyle} /></span>
-                            <span className={classes.textContainer}>Let's do this</span>
-                        </Button>
+                <div className={classes.Box}>
+                    <div className={classes.threeCol}>
+                        <div className={classes.coloneContainer}>
+                            <Typography variant="h1" className={classes.oneTitle}>Start a project</Typography>
+                        </div>
+                        <div className={classes.coltwoContainer}><p className={classes.secondPara}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
+                        <div className={classes.colthreeContainer}>
+                            <Button className={classes.buttonSty} href="https://mattfarley.ca/project-planner">
+                                <span className={classes.iconContainer}><TbHandRock className={classes.iconStyle} /></span>
+                                <span className={classes.textContainer}>
+                                    <span className={classes.text}> Let's do this</span>
+                                </span>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
