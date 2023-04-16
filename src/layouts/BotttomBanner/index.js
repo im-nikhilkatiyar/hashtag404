@@ -79,7 +79,7 @@ const useStyles = makeStyles(() => ({
             width: '463px',
             height: '60px',
         },
-        '@media screen and (max-width:915px)': {
+        '@media screen and (max-width:915px)':{
             marginBottom: '10px',
             height: '60px',
             width: 'auto',

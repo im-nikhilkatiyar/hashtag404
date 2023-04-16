@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
         },
     },
     container: {
-        backgroundColor: '#6E07F3',
+        backgroundColor:'#6E07F3',
         height: '460px',
         marginLeft: '68px',
         marginRight: '68px',
