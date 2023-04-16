@@ -1,13 +1,9 @@
 import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-// import BiMessageDetail from '@mui/icons-material/Message';
 import { makeStyles } from "@mui/styles";
 import { BiMessageDetail } from "react-icons/bi";
 
 const useStyles = makeStyles({
-  //  Interested 
-
+  // Interested 
   interest: {
     backgroundColor: "white",
     textAlign: "center",
@@ -21,11 +17,6 @@ const useStyles = makeStyles({
       margin: "40px",
     },
     '& Svg': {
-      // width: '160px',
-      // textAlign: "center",
-      // alignItems: "center",
-      // height: "2px",
-      // margin: "-9px",
       margin: "-4px 5px",
     }
   },
@@ -53,14 +44,8 @@ function Bottomstyle() {
         <p>I’m always open to discussing product design work or partnership opportunities.</p>
         <div className={classes.start_btn}>
           <div><BiMessageDetail />Start a conversation</div>
-          {/* <div id='icon'>
-            <Link href="/start">
-              <BiMessageDetail />
-            </Link>
-          </div> */}
         </div>
       </div></div>
   );
 }
-
 export default Bottomstyle;

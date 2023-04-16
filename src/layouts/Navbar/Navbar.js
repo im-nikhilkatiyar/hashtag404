@@ -235,4 +235,5 @@ function NavBarContainer() {
     </div>
   );
 }
+
 export default NavBarContainer;
