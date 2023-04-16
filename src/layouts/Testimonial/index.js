@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Input, Typography } from '@mui/material';
+import { Typography, Button, Input } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 // images
@@ -10,92 +9,96 @@ import pascal2 from '../../../assets/pascal2.png';
 
 const useStyles = makeStyles(() => ({
     container: {
-        height: '900px',
+        height: '1000px',
         width: '100%',
-        maxWidth: '2500px',
-        padding: '30px',
+        maxWidth: '1900px',
+        padding: '144px 72px',
         backgroundColor: 'white',
-        '@media screen and (max-width:995px)': {
-            width: '100%',
-            maxHeight: '720px',
+        borderTop: '1px solid #E6ECF8',
+        textAlign: 'center',
+        '@media screen and (max-width:993px)': {
+            width: 'auto',
+            maxHeight: '790px',
+            padding: '80px 24px',
         },
         '@media screen and (max-width:885px)': {
-            width: '100%',
-            maxHeight: '680px',
+            width: 'auto',
+            maxHeight: '780px',
         },
         '@media screen and (max-width:570px)': {
-            width: '100%',
-            maxHeight: '620px',
+            width: 'auto',
+            maxHeight: '720px',
         },
+    },
+    narrowContainer: {
+        maxWidth: '1844px',
+        height: '680px',
+        margin: '0px 20px',
+        textAlign: 'center',
+        '@media screen and (max-width:990px)': {
+            width: '100%',
+            maxHeight: '890px',
+        },
+
     },
     headingOne: {
         height: '10%',
-        color: 'black',
-        marginLeft: '44%',
+        color: '#141c3a',
         fontFamily: '"eurostile", sans-serif',
         fontWeight: '800',
-        '@media screen and (max-width:1100px)': {
-            marginLeft: '40%',
-        },
+        marginBottom: '1.5rem',
         '@media screen and (max-width:700px)': {
-            marginLeft: '35%',
             fontSize: '25px',
+            height: '38px',
         },
         '@media screen and (max-width:450px)': {
-            marginLeft: '30%',
             fontSize: '1.5em',
         },
     },
     headingTwo: {
         height: '5%',
         color: 'black',
-        marginLeft: '35%',
         fontFamily: '"europa", sans-serif',
         lineHeight: '1.5',
         fontWeight: '100',
+        marginBottom: '1.5rem',
         '@media screen and (max-width:1450px)': {
-            marginLeft: '28%',
+            marginLeft: '8%',
             lineHeight: '0.8',
         },
         '@media screen and (max-width:900px)': {
-            marginLeft: '28%',
-            fontSize: '1em',
-        },
-        '@media screen and (max-width:590px)': {
-            marginLeft: '22%',
-            fontSize: '0.8em',
-        },
-        '@media screen and (max-width:450px)': {
-            marginLeft: '20%',
-            fontSize: '0.6em',
+            marginLeft: '2%',
+            fontSize: '15px',
         },
     },
     containertwo: {
         width: '100%',
         maxWidth: '2000px',
         height: '600px',
-        padding: '40px',
         backgroundColor: 'white',
-        textAlign: 'center',
+        justifyContent: 'center',
+        display: 'flex',
         '@media screen and (max-width:875px)': {
             width: 'auto',
-            height: '420px',
+            height: '620px',
         },
     },
     containerthree: {
-        marginBottom: '20px',
+        padding: '0.75rem',
     },
     imageContainer: {
-        maxWidth: '10%',
+        maxWidth: '12%',
         marginLeft: '45%',
+        margin: '64px 0px 32px',
         '@media screen and (max-width:700px)': {
-            maxWidth: '15%',
+            margin: '10px 0px 10px 80px',
+            marginLeft: '45%',
         },
     },
     image: {
-        height: '150px',
-        width: '150px',
+        width: '10%',
         borderRadius: '50%',
+
         '@media screen and (max-width:759px)': {
             height: 'auto',
             width: '100%',
@@ -104,35 +107,40 @@ const useStyles = makeStyles(() => ({
     },
     textParagraph: {
         whiteSpace: 'pre-wrap',
-        fontSize: '1.5rem',
+        fontSize: '25px;',
         fontWeight: '300px',
         color: '#000',
-        marginBottom: '10px',
         fontFamily: ' "eurostile" , sans-serif',
-        '@media screen and (max-width:875px)': {
-            fontSize: '0.8rem',
+        margin: '0 auto 2.5rem',
+        maxWidth: '700px',
+        '@media screen and (max-width:933px)': {
+            fontSize: '20px',
             textOverflow: 'ellipsis',
+            width: 'auto',
         },
-        '@media screen and (max-width:575px)': {
-            fontSize: '0.6rem',
+        '@media screen and (max-width:656px)': {
+            fontSize: '15px',
             textOverflow: 'ellipsis',
         },
         '@media screen and (max-width:435px)': {
-            fontSize: '0.5rem',
+            fontSize: '15px',
             textOverflow: 'ellipsis',
         },
     },
     authorParagraphOne: {
         color: '#141C3A',
-        fontWeight: 'bold',
+        fontWeight: '800',
         fontSize: '25px',
+        marginBottom: '1.5rem',
         '@media screen and (max-width:800px)': {
             fontSize: '18px',
         },
     },
     authorParagraphTwo: {
-        fontSize: '20px',
+        fontSize: '1.2rem',
+        fontWeight: '400',
         color: '#141C3A',
+        lineHeight: '1.5',
         fontFamily: '"europa ", sans-serif',
         marginTop: '-1.25rem',
         '@media screen and (max-width:560px)': {
@@ -142,24 +150,25 @@ const useStyles = makeStyles(() => ({
     radiocontainer: {
         textAlign: 'center',
         transition: 'backgroundColor 0.25s',
+        margin: '32px 0px 16px',
     },
     radio1: {
-        display: 'inline-block ',
-        margin: '0 6px',
-        width: '15px',
-        height: '20px',
-        border: '1px solid #E6ECF8',
-        borderRadius: '30%',
+        margin: '0px 4px',
+        minWidth: '2px',
+        height: '12px',
+        border: '0.5px solid #6E07F3',
+        borderRadius: '50%',
         cursor: 'pointer',
+        padding: '0px',
     },
     radio2: {
-        display: 'inline-block ',
-        margin: '0 6px',
-        width: '15px',
-        height: '20px',
-        border: '1px solid #E6ECF8',
-        borderRadius: '30%',
+        margin: '0px 4px',
+        minWidth: '2px',
+        height: '12px',
+        border: '0.5px solid #6E07F3',
+        borderRadius: '50%',
         cursor: 'pointer',
+        padding: '0px',
     },
 }));
 
@@ -199,21 +208,22 @@ const Testimonials = () => {
     };
 
     return (
-    /** ****Whole Container Style ***** */
         <div className={classes.container}>
-            <h1 className={classes.headingOne}>Testimonials</h1>
-            <h2 className={classes.headingTwo}>People I've worked with have said some nice things...</h2>
-            <div className={classes.containertwo}>
-                <div className={classes.containerthree}>
-                    <div className={classes.imageContainer}>
-                        <Image className={classes.image} src={testimonials[ activeIndex ].image} alt="Testimonial" /><br /><br />
-                    </div>
-                    <Typography className={classes.textParagraph}>{testimonials[ activeIndex ].text}</Typography><br /><br />
-                    <Typography className={classes.authorParagraphOne}>{testimonials[ activeIndex ].author1}</Typography><br /><br />
-                    <Typography className={classes.authorParagraphTwo}>{testimonials[ activeIndex ].author2}</Typography><br /><br />
-                    <div className={classes.radiocontainer}>
-                        <Input type="radio" name="radio-btn" className={classes.radio1} checked={activeIndex === 0} onClick={handlePrevClick} />
-                        <Input type="radio" name="radio-btn" className={classes.radio2} checked={activeIndex === 1} onClick={handleNextClick} />
+            <div className={classes.narrowContainer}>
+                <h1 className={classes.headingOne}>Testimonials</h1>
+                <h2 className={classes.headingTwo}>People I've worked with have said some nice things...</h2>
+                <div className={classes.containertwo}>
+                    <div className={classes.containerthree}>
+                        <div className={classes.imageContainer}>
+                            <Image className={classes.image} src={testimonials[ activeIndex ].image} alt="Testimonial" />
+                        </div>
+                        <Typography className={classes.textParagraph}>{testimonials[ activeIndex ].text}</Typography>
+                        <h1 className={classes.authorParagraphOne}>{testimonials[ activeIndex ].author1}</h1>
+                        <h2 className={classes.authorParagraphTwo}>{testimonials[ activeIndex ].author2}</h2>
+                        <div className={classes.radiocontainer}>
+                            <Input type="radio" name="radio-btn" className={classes.radio1} checked={activeIndex === 0} onClick={handlePrevClick} />
+                            <Input type="radio" name="radio-btn" className={classes.radio2} checked={activeIndex === 1} onClick={handleNextClick} />
+                        </div>
                     </div>
                 </div>
             </div>
