@@ -91,7 +91,7 @@ const useStyles = makeStyles(() => ({
         marginLeft: '45%',
         margin: '64px 0px 32px',
         '@media screen and (max-width:700px)': {
-            margin: '10px 0px 10px 80px',
+            margin: '12px 0px 10px 80px',
             marginLeft: '45%',
         },
     },
