@@ -11,9 +11,9 @@ import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 
 // images
-import mf_avatar from '../../../assets/mf_avatar.jpg'
+import mf_avatar from '../assets/mf_avatar.jpg'
 import Image from "next/image";
-import hashtag from '../../../assets/hashtag.jpg'
+import hashtag from '../assets/hashtag.jpg'
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -226,7 +226,7 @@ function Header() {
                         </Button>
                     </div>
                     <div>
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                             <Button variant="text" startIcon={<RxCross2 size={20} color="#6E07F3" />} >
                             </Button>
                         </Link>

@@ -207,7 +207,7 @@ function NavBarContainer() {
                 </div>
                 <div>
                   <div>
-                    <Link legacyBehavior href="/Hello">
+                    <Link legacyBehavior href="/say_hello">
                       <a> Say Hello</a>
                     </Link>
                   </div>

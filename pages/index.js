@@ -6,7 +6,7 @@ import Footer from '../src/layouts/Footer/Footer';
 import Containerbox from '../src/layouts/Navbar/Containerbox';
 import Header from "../src/layouts/Navbar/Header";
 import Bottomstyle from '../src/layouts/Navbar/Bottomstyle';
-import Hello from '../src/layouts/Navbar/say_hello';
+import Hello from './say_hello';
 
 export default function Home() {
   return (
@@ -16,14 +16,14 @@ export default function Home() {
         <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
         <meta name="keywords" content="test1, test2, ssr, nextjs" />
       </Head>
-      {/* <Navbar /> */}
-      {/* <Header /> */}
-      {/* <Containerbox /> */}
-      {/* <Bottomstyle /> */}
-      {/* <Testimonial /> */}
-      {/* <BotttomBanner /> */}
-      {/* <Footer /> */}
-      <Hello />
+      <Navbar />
+      <Header />
+      <Containerbox />
+      <Bottomstyle />
+      <Testimonial />
+      <BotttomBanner />
+      <Footer />
+      {/* <Hello /> */}
     </div>
   );
 };
