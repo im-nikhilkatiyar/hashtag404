@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { TbHandRock } from 'react-icons/tb';
 import { makeStyles } from '@mui/styles';
-import { Button, Typography } from '@mui/material';
+import { Button, Link, Typography } from '@mui/material';
 
 const useStyles = makeStyles(() => ({
 
@@ -237,12 +237,14 @@ function BottomBanner() {
                         </div>
                         <div className={classes.coltwoContainer}><p className={classes.secondPara}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
                         <div className={classes.colthreeContainer}>
-                            <Button className={classes.buttonSty} href="https://mattfarley.ca/project-planner">
-                                <span className={classes.iconContainer}><TbHandRock className={classes.iconStyle} /></span>
-                                <span className={classes.textContainer}>
-                                    <span className={classes.text}> Let's do this</span>
-                                </span>
-                            </Button>
+                            <Link legacyBehaviour href="/form">
+                                <Button className={classes.buttonSty}>
+                                    <span className={classes.iconContainer}><TbHandRock className={classes.iconStyle} /></span>
+                                    <span className={classes.textContainer}>
+                                        <span className={classes.text}> Let's do this</span>
+                                    </span>
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
