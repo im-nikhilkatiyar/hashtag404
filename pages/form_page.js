@@ -13,20 +13,17 @@ import Men_containerbox from '../src/layouts/mentorship/Men_containerbox';
 import Men_bottomstyle from '../src/layouts/mentorship/Men_bottomstyle';
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Home-Hashtag404</title>
-        <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
-        <meta name="keywords" content="test1, test2, ssr, nextjs" />
-      </Head>
-      <Navbar />
-      <Header />
-      <Containerbox />
-      <Bottomstyle />
-      <Testimonial />
-      <BotttomBanner />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Head>
+                <title>Home-Hashtag404</title>
+                <meta name="description" content="Meta description for the Home page THIS IS AS HOME PAGE" />
+                <meta name="keywords" content="test1, test2, ssr, nextjs" />
+            </Head>
+            <Men_navbar />
+            <Men_header />
+            <Men_containerbox />
+            <Men_bottomstyle />
+        </div>
+    );
 };

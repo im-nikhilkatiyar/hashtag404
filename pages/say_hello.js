@@ -1,12 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-// import TextField from '@material-ui/core/TextField';
 import Link from 'next/link';
-// import ReplayIcon from '@mui/icons-material/Replay';
-// import { MdReplay } from "react-icons/MdReplay";
-// import { MdReplay } from "@react-icons/all-files/fa/MdReplay";
 import Button from '@material-ui/core/Button';
-// import SendIcon from '@material-ui/icons/Send';
 import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 
@@ -25,17 +20,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     logo: {
-        // marginTop: "3%",
         padding: "50px",
         marginLeft: "5%"
     },
     buttons: {
         display: "flex",
-        // flexDirection: "row",
         paddingLeft: "90%",
-        // textDecoration:"none",
-        // borderColor: "white",
-        // justifyContent: "space-evenly",
         marginTop: "-5%",
         '& > div:nth-child(1)': {
             margin: "auto -23%",
@@ -66,22 +56,12 @@ const useStyles = makeStyles((theme) => ({
     second_Header: {
         maxWidth: "850px",
         margin: "0 auto",
-        // padding: "20px",
-        // borderRadius: "5px",
-        // marginTop: "50px",
-        // display: "flex",
-        // flexDirection: "column",
-        // justifyContent: "space-between",
-        // alignItems: "center",
-        // maxHeight: "100px",
-
     },
     headspace: {
         fontSize: "3rem",
         textAlign: "center",
         fontFamily: '"europa", sans-serif',
-    }
-    ,
+    },
     tags: {
         maxWidth: "900px",
         margin: "0 auto",
@@ -92,54 +72,40 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        // backgroundColor: "#f5f5f5",
-        gap: "0px", // add this line
-
+        gap: "0px",
         '& > div:nth-child(1)': {
             display: "flex",
-            // flexDirection: "column",
             gap: "25px",
             '@media screen and (max-width: 500px)': {
                 display: 'block',
-                // flexDirection: "column",
                 marginLeft: "-55%",
                 fontSize: "xx-large",
                 '& input': {
-                    height: '20%', // add this line
+                    height: '20%',
                     width: "200%"
                 }
             },
         },
         '& > div:nth-child(2)': {
-            // border: '1px solid #ccc',
             padding: '0px',
-            // fontSize: '26px',
-            // backgroundColor: '#F5F5F5',
             color: '#333',
             minHeight: '100px',
             resize: 'vertical',
             '@media screen and (max-width: 500px)': {
                 display: 'block',
-                // flexDirection: "column",
-                // marginLeft: "-55%",
                 fontSize: "xx-large",
                 '& input': {
-                    // height: '20%', // add this line
-                    // width: "130%"
                 }
             },
         }
     },
     headings: {
         color: "rgba(41, 51, 71, 0.65)",
-        // margin: "50px"
-
     },
     name: {
         border: '1px solid #ccc',
         padding: '10px',
         fontSize: '26px',
-        // backgroundColor: '#F5F5F5',
         color: '#333',
         textDecoration: "none",
         fontFamily: '"europa", sans-serif',
@@ -152,7 +118,6 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #ccc',
         padding: '10px',
         fontSize: '26px',
-        // backgroundColor: '#F5F5F5',
         color: '#333',
         textDecoration: "none",
         fontFamily: '"europa", sans-serif',
@@ -161,12 +126,6 @@ const useStyles = makeStyles((theme) => ({
         borderColor: "#E6ECF8",
         borderRadius: "4px",
     },
-    messagebox: {
-        // display: "block",
-        // flexBasis: "0",
-        // flexGrow: "1",
-        // flexShrink: "1"
-    },
     message: {
         verticalAlign: "top",
         borderColor: "#E6ECF8",
@@ -174,27 +133,23 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "4px",
         padding: '10px',
         fontSize: '26px',
-        // backgroundColor: '#F5F5F5',
         color: '#333',
-        height: '243px', // add this line
+        height: '243px',
         width: "680px",
         fontFamily: '"europa", sans-serif',
         color: "rgba(41, 51, 71, 0.65)",
-        // boxShadow: "0 0px 0px rgba(0, 0, 0, .2)",
         margin: "20px auto",
         '& input': {
-            fontSize: '18px', // add this line
-            height: '100%', // add this line
-            border: 'none', // add this line
-            outline: 'none' // add this line
+            fontSize: '18px',
+            height: '100%',
+            border: 'none',
+            outline: 'none'
         }
     },
     start_btn: {
         color: "#6e07f3",
         border: "2px solid #6e07f3",
         borderRadius: "35px",
-        // maxWidth: "380px",
-        // height: "10px",
         padding: "13px",
         fontSize: "20px",
         marginBottom: "80px",
@@ -216,7 +171,7 @@ function Header() {
         <div className={classes.title}>
             <div>
                 <div className={classes.logo}>
-                    <Link href="/">
+                    <Link legacyBehavior href="/">
                         <Image src={hashtag} width={80} height={40} />
                     </Link>
                 </div>
@@ -235,7 +190,6 @@ function Header() {
             </div>
             <div className={classes.navbar_line}>
                 <div className={classes.line}>
-
                 </div>
             </div>
             {/* image */}
@@ -270,10 +224,7 @@ function Header() {
                     <div>Submit</div>
                 </div>
             </div>
-
-
         </div>
     )
 }
-
 export default Header;

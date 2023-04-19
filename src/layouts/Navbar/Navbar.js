@@ -192,7 +192,7 @@ function NavBarContainer() {
           <div className={classes.navbar_back}>
             <div className={classes.navbar}>
               <div className={classes.img404}>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <Image src={hashtag} width={80} height={40} />
                 </Link>
               </div>
@@ -200,7 +200,7 @@ function NavBarContainer() {
               <div className={classes.Navbar_tags}>
                 <div>
                   <div>
-                    <Link legacyBehavior href="/Mentorship">
+                    <Link legacyBehavior href="/form_page">
                       <a> Mentorship</a>
                     </Link>
                   </div>
