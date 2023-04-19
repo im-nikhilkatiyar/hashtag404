@@ -112,7 +112,7 @@ const useStyles = makeStyles(() => ({
         color: '#000',
         fontFamily: ' "eurostile" , sans-serif',
         margin: '0 auto 2.5rem',
-        maxWidth: '700px',
+        maxWidth: '800px',
         '@media screen and (max-width:933px)': {
             fontSize: '20px',
             textOverflow: 'ellipsis',
