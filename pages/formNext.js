@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
 import { makeStyles } from '@mui/styles';
 import Image from 'next/image';
-import { Button, Input, Link, Typography } from '@mui/material';
+import {Button, Input, Link, Typography } from '@mui/material';
 import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
-import { useRef } from 'react';
+
 import mf_avatar from '../assets/mf_avatar.jpg';
 import hashtag from '../assets/hashtag.jpg';
 
@@ -79,7 +80,6 @@ const useStyles = makeStyles(() => ({
     sectionConatiner: {
         textAlign: 'center',
         display: 'block',
-
     },
     secondConatiner: {
         maxWidth: '1444px',
@@ -300,8 +300,8 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const options = [ 'Basin', 'Builders', 'Houston', 'New Product' ];
-const optionTwo = [ 'Collaborator', 'Investors', 'CoFounder' ];
+const options = [ 'Responsive Design', 'WebApp', 'Mobile App' ];
+const optionTwo = [ '$5000-$10000', '$10000-$25000', '$25000+' ];
 
 function ConversationForm() {
     const classes = useStyles();
@@ -366,7 +366,7 @@ function ConversationForm() {
                 <div className={classes.navMenu}>
                     <div className={classes.navEnd}>
                         <Button className={classes.navItem} onClick={handleClear} startIcon={<GiAnticlockwiseRotation className={classes.navIcon} />} />
-                        <Link legacyBehaviour href="/">
+                        <Link legacyBehavior href="/">
                             <Button className={classes.navItem} startIcon={<RxCross2 className={classes.navIcon} />} />
                         </Link>
                     </div>
@@ -380,7 +380,7 @@ function ConversationForm() {
                                 <div className={classes.imageContainer}>
                                     <Image src={mf_avatar} className={classes.image} alt="avtar" />
                                 </div>
-                                <Typography variant="h1" className={classes.heading}>Want to discuss a startup collaboration? I'm most definitely game.</Typography>
+                                <Typography variant="h1" className={classes.heading}>I’m excited to learn about your project. Ready to get started?</Typography>
                             </div>
                         </div>
                     </div>
@@ -424,7 +424,7 @@ function ConversationForm() {
                         <div className={classes.coulumnCentered}>
                             <div className={classes.halfColumn}>
                                 <div className={classes.field}>
-                                    <label className={classes.labelStyle}>Which Project</label>
+                                    <label className={classes.labelStyle}>Type of Project</label>
                                     <div className={classes.InputControl}>
                                         <select className={classes.optionContainer} value={selectedOption} onChange={handleOptionChange}>
                                             <option value="" />
@@ -440,7 +440,7 @@ function ConversationForm() {
                             </div>
                             <div className={classes.halfColumn}>
                                 <div className={classes.field}>
-                                    <label className={classes.labelStyle}>Your Interest</label>
+                                    <label className={classes.labelStyle}>Budget</label>
                                     <div className={classes.InputControl}>
                                         <select className={classes.optionContainer} value={selectedOptionTwo} onChange={handleOptionsChange}>
                                             <option value="" />
