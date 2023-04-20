@@ -237,7 +237,7 @@ function BottomBanner() {
                         </div>
                         <div className={classes.coltwoContainer}><p className={classes.secondPara}>Interested in working together? We should  queue up a time to chat. Ill buy the coffee.</p></div>
                         <div className={classes.colthreeContainer}>
-                            <Link legacyBehaviour href="/form">
+                            <Link legacyBehaviour href="/formNext">
                                 <Button className={classes.buttonSty}>
                                     <span className={classes.iconContainer}><TbHandRock className={classes.iconStyle} /></span>
                                     <span className={classes.textContainer}>
