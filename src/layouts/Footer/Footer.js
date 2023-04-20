@@ -18,15 +18,15 @@ const useStyles = makeStyles(() => ({
     footerContainer: {
         maxWidth: '1900px',
         width: '100%',
-        height: '625px',
-        padding: '64px 24px',
+        height: '635px',
+        padding: '4rem 1.5rem 4rem',
         backgroundColor: '#6E07F3',
         textAlign: 'center !important',
         '@media screen and (max-width:1504px)': {
             width: 'auto',
         },
         '@media screen and (max-width:615px)': {
-            height: 'auto',
+            height: '435px',
         },
         '@media screen and (max-width:414px)': {
             padding: '32px 16px',
@@ -47,7 +47,6 @@ const useStyles = makeStyles(() => ({
             height: 'auto',
         },
         '@media screen and (max-width:414px)': {
-            padding: '0px 16px',
             height: 'auto',
         },
         '@media screen and (max-width: 375px)': {
@@ -79,7 +78,7 @@ const useStyles = makeStyles(() => ({
         },
     },
     headingContainer: {
-        height: '146px',
+        height: '176px',
         margin: '-12px -12px 12px',
         maxWidth: '1768px',
         width: '100%',
@@ -95,20 +94,20 @@ const useStyles = makeStyles(() => ({
         },
         '@media screen and (max-width:414px)': {
             flexDirection: 'column',
-            height: 'auto',
-            margin: '0px',
+            height: '145px',
+            margin: '0.75rem',
         },
         '@media screen and (max-width: 375px)': {
-            height: 'auto',
-            margin: '0px',
+            height: '125px',
         },
     },
     headingPart: {
         width: '500px',
-        height: '146px',
+        height: '136px',
         padding: '12px',
         '@media screen and (max-width:724px)': {
             width: 'auto',
+            height: '66px',
         },
         '@media screen and (max-width:526px)': {
             width: '500',
@@ -119,46 +118,45 @@ const useStyles = makeStyles(() => ({
         },
     },
     heading: {
-        fontSize: '1.8em',
+        fontSize: '1.6rem',
         fontFamily: ' "eurostile", sans-serif',
         color: 'antiquewhite',
-        opacity: '0.9',
-        width: '452px',
-        height: '87px',
-        padding: '32px 56px',
+        opacity: '0.8',
+        width: '322px',
+        height: '70px',
         textAlign: 'center !important',
-        lineHeight: '1.5',
+        lineHeight: '1.25',
+        margin: '2rem auto',
+        fontWeight: '400',
         '@media screen and (max-width:724px)': {
             width: 'auto',
         },
         '@media screen and (max-width:582px)': {
             fontSize: '20.6px',
             width: 'auto',
-            padding: '32px 0px',
         },
         '@media screen and (max-width:414px)': {
             width: '100%',
-            padding: '18px 0px',
             fontSize: '20px',
             lineHeight: '1.3em',
         },
         '@media screen and (max-width: 375px)': {
             fontSize: '20px',
-            padding: '18px 0px',
+
         },
     },
     socialContainer: {
         backgroundColor: '#6E07F3',
-        height: '67px',
+        height: '50px',
         width: '1700px',
-        marginBottom: '56px',
+        margin: '0 auto 3.5rem',
         '@media screen and (max-width:1704px)': {
             width: 'auto',
         },
         '@media screen and (max-width:724px)': {
             width: 'auto',
             display: 'inline-block',
-            height: '76px',
+            height: '46px',
         },
         '@media screen and (max-width:414px)': {
             height: 'auto',
@@ -172,18 +170,21 @@ const useStyles = makeStyles(() => ({
     },
     roundButton: {
         margin: ' 0px 13px',
-        height: '55px',
-        width: '55px',
-        borderRadius: '100%',
-        paddingLeft: '15px',
+        height: '50px',
+        minWidth: '35px',
+        borderRadius: '50%',
+        paddingLeft: '18px',
         paddingRight: '8px',
-        outline: '2px solid antiquewhite',
+        border: '2px solid rgba(255, 255, 255, 0.5)',
         backgroundColor: '#6E07F3',
         '&:hover': {
             backgroundColor: 'white',
+            '& $socialIcon': {
+                color: '#6E07F3',
+            },
         },
         '@media screen and (max-width:724px)': {
-            margin: '2px 3.2px',
+            margin: '2px 3.6px',
             minWidth: '15px',
             width: '50px',
             height: '50px',
@@ -191,30 +192,28 @@ const useStyles = makeStyles(() => ({
             display: 'inline-block',
         },
         '@media screen and (max-width:414px)': {
-            margin: '2px 1.6px',
             minWidth: '15px',
             width: '40px',
             height: '40px',
             padding: '10.4px 9.6px',
         },
         '@media screen and (max-width: 375px)': {
-            margin: '2px 1.6px',
             minWidth: '15px',
             width: '30px',
             height: '30px',
-            padding: '8.4px 7.2px',
+            padding: '4.4px 7.2px',
         },
     },
     socialIcon: {
-        height: '30px',
-        width: '50px',
-        borderRadius: '70%',
+        height: '40px',
+        minWidth: '20px',
+        borderRadius: '50%',
         color: 'white',
         '&:hover': {
             color: '#6E07F3',
         },
         '@media screen and (max-width:724px)': {
-            width: '35px',
+            width: '30px',
             height: '20px',
         },
         '@media screen and (max-width:414px)': {
@@ -229,9 +228,8 @@ const useStyles = makeStyles(() => ({
     copyrightContainer: {
         fontSize: '23px',
         color: 'antiquewhite',
-        opacity: '0.9',
-        fontWeight: '500',
-        letterSpacing: '1.5px',
+        opacity: '0.8',
+        fontWeight: '400',
         width: '1700px',
         height: '27px',
         '@media screen and (max-width:1704px)': {
@@ -245,34 +243,36 @@ const useStyles = makeStyles(() => ({
             height: '20px',
         },
         '@media screen and (max-width: 375px)': {
-            fontSize: '12px',
             height: '15px',
         },
     },
     bulmaContainer: {
-        padding: '11px',
         width: '1700px',
-        height: '120px',
+        height: '50px',
+        opacity: '0.8',
+        marginTop: '0.7rem',
         '@media screen and (max-width:1704px)': {
             width: 'auto',
         },
         '@media screen and (max-width:414px)': {
-            height: '30px',
-            padding: '8px',
-        },
-        '@media screen and (max-width: 375px)': {
             height: '25px',
-            padding: '6px',
         },
+        '& a': {
+            display: 'inline-block',
+            maxheight: '50px',
+        },
+    },
+    copyrightIcon: {
+        verticalAlign: '-0.125em',
+        width: '30px',
     },
     bulmaImage: {
-        width: '20%',
         textAlign: 'center',
-        maxWidth: '100%',
-        transform: 'scale(0.5)',
+        minWidth: '10px',
+        minHeight: '10px',
+        transform: 'scale(0.4)',
     },
-}
-));
+}));
 
 function Footer() {
     const classes = useStyles();
@@ -281,7 +281,9 @@ function Footer() {
         <footer className={classes.footerContainer}>
             <div className={classes.container}>
                 <div className={classes.img_container}>
-                    <Image src={Logo1} alt="Logo-hashtag" className={classes.logo} />
+                    <a href="https://mattfarley.ca/">
+                        <Image src={Logo1} alt="Logo-hashtag" className={classes.logo} />
+                    </a>
                 </div>
                 <div className={classes.headingContainer}>
                     <div className={classes.headingPart}>
@@ -308,9 +310,9 @@ function Footer() {
                         <Button variant="contained" color="primary" className={classes.roundButton} startIcon={<SlEnvolope className={classes.socialIcon} />} />
                     </a>
                 </div>
-                <div className={classes.copyrightContainer}>Handcrafted by me <AiOutlineCopyrightCircle style={{ verticalAlign: '-0.125em', width: '30px' }} /> twentytwentythree </div><br />
+                <div className={classes.copyrightContainer}>Handcrafted by me <AiOutlineCopyrightCircle className={classes.copyrightIcon} /> twentytwentythree </div>
                 <div className={classes.bulmaContainer}>
-                    <a href="https://bulma.io/">
+                    <a href="https://bulma.io/" className={classes.bulmaAnch}>
                         <Image src={bulma} className={classes.bulmaImage} alt="made with bulma" />
                     </a>
                 </div>
