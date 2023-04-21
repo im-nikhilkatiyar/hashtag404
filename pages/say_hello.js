@@ -153,14 +153,20 @@ const useStyles = makeStyles((theme) => ({
         color: "#6e07f3",
         border: "2px solid #6e07f3",
         borderRadius: "35px",
-        padding: "13px",
-        fontSize: "20px",
+        padding: "5px",
+        // fontSize: "20px",
         marginBottom: "80px",
-        width: "160px",
+        width: "190px",
         textAlignLast: "center",
         "&:hover": {
             backgroundColor: "#6e07f3",
             color: "white",
+        },
+        '& a': {
+            color: 'black',
+        },
+        '& a:hover': {
+            color: '#6E07F3', // set text color to #6E07F3 on hover
         },
         '@media screen and (max-width: 500px)': {
             width: "100%",
@@ -269,9 +275,9 @@ function Header() {
                         onChange={(event) => setMessage(event.target.value)}
                         type="text" required />
                 </div>
-                <div className={classes.start_btn}>
+                <div >
                     {/* <Link legacyBehavior href="#"> */}
-                    <Button type="submit">Submit</Button>
+                    <Button className={classes.start_btn} type="submit">Submit</Button>
                     {/* </Link> */}
 
                 </div>
