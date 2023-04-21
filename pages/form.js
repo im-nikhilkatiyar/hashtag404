@@ -349,6 +349,9 @@ function ConversationForm() {
     const handleClear = () => {
         setName('');
         setEmail('');
+        setText('');
+        setSelectedOption('');
+        setSelectedOptionTwo('');
         if (inputRef.current) {
             inputRef.current.value = '';
         }
