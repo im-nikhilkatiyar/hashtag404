@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
@@ -43,15 +42,15 @@ const useStyles = makeStyles({
     },
     '& > div:nth-child(1)': {
       width: '190px',
-      marginLeft: '5%',
+      marginLeft: '3%',
     },
     '& a': {
       textDecoration: 'none',
     },
     // nav list
     '& > div:nth-child(2)': {
-      width: '70px',
-      marginRight: '65%',
+      width: '0.7rem',
+      marginRight: '60%',
     },
   },
   Navbar_btn: {
@@ -65,6 +64,7 @@ const useStyles = makeStyles({
     },
   },
   Navbar_tags: {
+    padding: "20px",
     maxWidth: '1440px',
     margin: 'auto',
     display: 'flex',
@@ -73,6 +73,8 @@ const useStyles = makeStyles({
       display: 'none',
     },
     '& > div:nth-child(1)': {
+      fontWeight: 400,
+      fontFamily: ' "eurostile", sans-serif',
       marginRight: 'auto',
       maxWidth: '1440px',
       width: '90px',
@@ -82,10 +84,10 @@ const useStyles = makeStyles({
       alignItems: 'center',
       margin: '10px',
       backgroundColor: 'white',
-      fontSize: '2ch',
+      fontSize: '2.1ch',
       textDecoration: 'none',
       listStyle: 'none',
-      padding: '0px 100px',
+      padding: '0px 70px',
       '& a': {
         color: 'black',
       },
@@ -95,17 +97,20 @@ const useStyles = makeStyles({
     },
     //nav list1    
     '& > div:nth-child(2)': {
+      fontSize: "18px",
+      fontWeight: 400,
+      fontFamily: ' "eurostile", sans-serif',
       marginRight: 'auto',
       maxWidth: '1440px',
       backgroundColor: 'white',
       border: '2px solid #6E07F3',
       borderRadius: '30px',
-      width: '110px',
+      width: '115px',
       height: '10px',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '15px',
+      padding: '20px',
       textDecoration: 'none', // set text decoration to none
       '& a': {
         color: '#6e07f3',
@@ -180,29 +185,29 @@ function NavBarContainer() {
   );
 
   return (
-    <div style={{ backgroundColor: 'white' }}>
+    <div>
       <div>
         <title>Home-Hashtag404</title>
         <nav>
           <div className={classes.navbar_back}>
             <div className={classes.navbar}>
               <div className={classes.img404}>
-                <Link href="/">
-                  <Image src={hashtag} />
+                <Link legacyBehavior href="/">
+                  <Image src={hashtag} width={80} height={40} />
                 </Link>
               </div>
               <div />
               <div className={classes.Navbar_tags}>
                 <div>
                   <div>
-                    <Link legacyBehavior href="/Mentorship">
+                    <Link legacyBehavior href="/form_page">
                       <a> Mentorship</a>
                     </Link>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <Link legacyBehavior href="/Hello">
+                    <Link legacyBehavior href="/say_hello">
                       <a> Say Hello</a>
                     </Link>
                   </div>
