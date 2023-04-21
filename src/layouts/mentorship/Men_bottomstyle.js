@@ -2,11 +2,12 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { makeStyles } from "@mui/styles";
-import { BiMessageDetail } from "react-icons/bi";
+import { IoHandLeftOutline } from "react-icons/io5";
 
 const useStyles = makeStyles({
     //  Interested 
     interest: {
+        border: "1px solid #d9fff0",
         backgroundColor: "white",
         textAlign: "center",
         height: "30%",
@@ -43,9 +44,10 @@ function Bottomstyle() {
                 <h2>If you're wanting to level up, mentorship helps.</h2>
                 <p>Schedule a free consultation to ask questions, discuss details, and decide if it's a fit.</p>
                 <div className={classes.start_btn}>
-                    <div><BiMessageDetail />Introduce yourself</div>
+                    <Link legacyBehavior href="introduce_yourself"><a><IoHandLeftOutline />Introduce yourself</a></Link>
                 </div>
-            </div></div>
+            </div>
+        </div>
     );
 }
 

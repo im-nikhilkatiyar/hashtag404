@@ -93,7 +93,7 @@ const useStyles = makeStyles({
                     },
                     "& > p:nth-child(2)": {
                         color: "#6E07F3",
-                        lineHeight: "80px",
+                        lineHeight: "100px",
                         fontSize: "40px",
                         fontFamily: '"eurostile", sans-serif',
                     },

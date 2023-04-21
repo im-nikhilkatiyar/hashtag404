@@ -29,8 +29,6 @@ const useStyles = makeStyles({
       alignItems: "center",
       margin: "-100px 50px",
       // padding: "50px 30px",
-      // borderBottom: "1px solid #E6ECF8",
-      // borderRight: "0px solid #E6ECF8",
     },
     "& > div": {
       maxWidth: "500px",
@@ -40,13 +38,11 @@ const useStyles = makeStyles({
       width: "100%",
       boxShadow: "0 0 2px #d4d1d1",
       border: "0px solid #d4d1d1",
-      // boxShadow: "0px 4px 4px -1px rgba(233, 240, 243, 0.5)",
       boxShadow: "0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 0.1px #E6ECF8",
       "@media screen and (max-width: 1070px)": {
         minWidth: "280px",
         height: "930px",
         maxWidth: "900px",
-        // borderRadius: "100px"
       },
     },
     "& > div:nth-child(1)": {
@@ -56,13 +52,6 @@ const useStyles = makeStyles({
       "@media screen and (max-width: 850px)": {
         borderRadius: "0px 0px",
       },
-      // "& > ul:nth-child(1)": {
-      //   "& > li:nth-child(1)": {
-      //     fontWeight: "800",
-      //     color: "#141c3a",
-      //     fontFamily: '"eurostile", sans-serif',
-      //   }
-      // }
       "& > ul": {
         "& > li": {
           "& > p": {
@@ -106,7 +95,6 @@ const useStyles = makeStyles({
       textDecoration: "none",
       listStyle: "none",
       "& p": {
-        // margin: "10px"
       },
     },
   },

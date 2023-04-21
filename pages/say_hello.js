@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Button from '@material-ui/core/Button';
 import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
+import { useState, useRef } from "react";
+import { Input } from "@mui/material";
+import { Typography } from '@mui/material';
 
 // images
 import mf_avatar from '../assets/mf_avatar.jpg'
@@ -76,9 +79,9 @@ const useStyles = makeStyles((theme) => ({
         '& > div:nth-child(1)': {
             display: "flex",
             gap: "25px",
-            '@media screen and (max-width: 500px)': {
+            '@media screen and (max-width: 685px)': {
                 display: 'block',
-                marginLeft: "-55%",
+                marginLeft: "-45%",
                 fontSize: "xx-large",
                 '& input': {
                     height: '20%',
@@ -91,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
             color: '#333',
             minHeight: '100px',
             resize: 'vertical',
-            '@media screen and (max-width: 500px)': {
+            '@media screen and (max-width: 685px)': {
                 display: 'block',
                 fontSize: "xx-large",
                 '& input': {
@@ -166,7 +169,35 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Header() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const classes = useStyles();
+    const [refresh, setRefresh] = useState('');
+    const inputRef = useRef(null);
+    const handleClear = () => {
+        setName('');
+        setEmail('');
+        setMessage('');
+        if (inputRef.current) {
+            inputRef.current.value = '';
+        }
+    };
+    const [error, setError] = useState(false);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (name === '') {
+            setError(true);
+            return;
+        }
+
+        if (email === '') {
+            setError(true);
+            return;
+        }
+        alert('Form submitted!');
+    };
     return (
         <div className={classes.title}>
             <div>
@@ -177,7 +208,7 @@ function Header() {
                 </div>
                 <div className={classes.buttons}>
                     <div>
-                        <Button variant="text" startIcon={<GiAnticlockwiseRotation size={20} color="#6E07F3" />} >
+                        <Button variant="text" onClick={handleClear} startIcon={<GiAnticlockwiseRotation size={20} color="#6E07F3" />} >
                         </Button>
                     </div>
                     <div>
@@ -204,26 +235,52 @@ function Header() {
                     </p>
                 </div>
             </div>
-            <div className={classes.tags}>
+            <form className={classes.tags} onSubmit={handleSubmit}>
                 <div>
                     <div>
                         <label className={classes.headings}>Name:<br /></label>
-                        <input className={classes.name} type="text" required />
+                        <Input
+                            className={classes.name}
+                            type="text"
+                            name="name"
+                            value={name}
+                            onChange={(event) => setName(event.target.value)}
+                            required
+                        />
                     </div>
 
                     <div>
                         <label className={classes.headings}>Email:<br /></label>
-                        <input className={classes.email} type="text" required />
+                        <Input
+                            className={classes.email}
+                            type="email"
+                            name="name"
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
+                            required
+                        />
                     </div>
                 </div>
                 <div className={classes.messagebox}>
                     <label className={classes.headings}>Message:<br /></label>
-                    <textarea className={classes.message} type="text" required />
+                    <textarea className={classes.message}
+                        name="name"
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
+                        type="text" required />
                 </div>
                 <div className={classes.start_btn}>
-                    <div>Submit</div>
+                    {/* <Link legacyBehavior href="#"> */}
+                    <Button type="submit">Submit</Button>
+                    {/* </Link> */}
+
                 </div>
-            </div>
+                {error && (
+                    <Typography variant="body1" color="error">
+                        Please fill in all fields
+                    </Typography>
+                )}
+            </form>
         </div>
     )
 }
