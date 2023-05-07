@@ -2,7 +2,9 @@ import React, { useState, useRef } from 'react';
 
 import { makeStyles } from '@mui/styles';
 import Image from 'next/image';
-import {Button, Input, Link, Typography } from '@mui/material';
+import {
+    Button, Input, Link, Typography,
+} from '@mui/material';
 import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
 
@@ -306,6 +308,16 @@ const optionTwo = [ '$5000-$10000', '$10000-$25000', '$25000+' ];
 function ConversationForm() {
     const classes = useStyles();
 
+    const initialState = {
+        name: '',
+        email: '',
+        message: '',
+    };
+
+    const [ userData, setUserData ] = useState(initialState);
+
+    const [ error, setError ] = useState(false);
+
     const [ selectedOption, setSelectedOption ] = useState('');
 
     const handleOptionChange = (event) => {
@@ -318,38 +330,104 @@ function ConversationForm() {
         setSelectedOptionTwo(event.target.value);
     };
 
-    const [ text, setText ] = useState('');
+    // const [ text, setText ] = useState('');
 
-    const handleTextChange = (event) => {
-        setText(event.target.value);
+    // const handleTextChange = (event) => {
+    //     setText(event.target.value);
+    // };
+
+    // const [ name, setName ] = useState('');
+    // const [ email, setEmail ] = useState('');
+
+    const [ submitted, setSubmitted] = useState(false);
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setUserData({ ...userData, [ name ]: value });
     };
 
-    const [ name, setName ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ error, setError ] = useState(false);
+    const PostData = async (e) => {
+        e.preventDefault();
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+        setError(false);
 
-        if (name === '') {
+        if (!userData.name || userData.name.trim() === '') {
             setError(true);
             return;
         }
 
-        if (email === '') {
+        if (!userData.email || userData.email.trim() === '') {
             setError(true);
             return;
         }
-        alert('Form submitted!');
+
+        if (!userData.message || userData.message.trim() === '') {
+            setError(true);
+            return;
+        }
+
+        if (!selectedOption || selectedOption.trim() === '') {
+            setError(true);
+            return;
+        }
+
+        if (!selectedOptionTwo || selectedOptionTwo.trim() === '') {
+            setError(true);
+            return;
+        }
+        //     alert('Form submitted!');
+        try {
+            const dataToSend = {
+                name: userData.name,
+                email: userData.email,
+                message: userData.message,
+                selectedOption,
+                selectedOptionTwo,
+            };
+
+            const response = await fetch('/api/hello', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: JSON.stringify(dataToSend),
+            });
+
+            // const data = await response.json();
+
+            setSubmitted(true);
+            alert('Form submitted!');
+            console.log(userData);
+            console.log(selectedOption, selectedOptionTwo);
+        } catch (error) {
+            console.error(error);
+        }
     };
+
+    // const [ error, setError ] = useState(false);
+
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+
+    //     if (name === '') {
+    //         setError(true);
+    //         return;
+    //     }
+
+    //     if (email === '') {
+    //         setError(true);
+    //         return;
+    //     }
+    //     alert('Form submitted!');
+    // };
 
     const [ refresh, setRefresh ] = useState('');
     const inputRef = useRef(null);
 
     const handleClear = () => {
-        setName('');
-        setEmail('');
-        setText('');
+        setUserData.name('');
+        setUserData.email('');
+        // setText('');
         setSelectedOption('');
         setSelectedOptionTwo('');
         if (inputRef.current) {
@@ -369,7 +447,7 @@ function ConversationForm() {
                 <div className={classes.navMenu}>
                     <div className={classes.navEnd}>
                         <Button className={classes.navItem} onClick={handleClear} startIcon={<GiAnticlockwiseRotation className={classes.navIcon} />} />
-                        <Link legacyBehavior href="/">
+                        <Link legacybehavior href="/">
                             <Button className={classes.navItem} startIcon={<RxCross2 className={classes.navIcon} />} />
                         </Link>
                     </div>
@@ -391,7 +469,7 @@ function ConversationForm() {
             </div>
             <section className={classes.sectionConatinerTwo}>
                 <div className={classes.sectionCentered}>
-                    <form className={classes.formContainer} onSubmit={handleSubmit}>
+                    <form className={classes.formContainer}>
                         <div className={classes.coulumnCentered}>
                             <div className={classes.halfColumn}>
                                 <div className={classes.field}>
@@ -401,8 +479,9 @@ function ConversationForm() {
                                             className={classes.inputText}
                                             type="text"
                                             name="name"
-                                            value={name}
-                                            onChange={(event) => setName(event.target.value)}
+                                            id="name"
+                                            value={userData.name}
+                                            onChange={handleInputChange}
                                             required
                                         />
                                     </div>
@@ -416,8 +495,9 @@ function ConversationForm() {
                                             className={classes.inputText}
                                             type="email"
                                             name="email"
-                                            value={email}
-                                            onChange={(event) => setEmail(event.target.value)}
+                                            id="email"
+                                            value={userData.email}
+                                            onChange={handleInputChange}
                                             required
                                         />
                                     </div>
@@ -463,7 +543,7 @@ function ConversationForm() {
                             {/* <div className={classes.messagefield}> */}
                             <label className={classes.labelStyle}>Additional Details</label>
                             <div className={classes.InputControl}>
-                                <textarea className={classes.textareaContainer} value={text} onChange={handleTextChange} />
+                                <textarea className={classes.textareaContainer} name="message" value={userData.message} onChange={handleInputChange} />
                             </div>
                             {/* </div> */}
                             {/* </div> */}
@@ -472,7 +552,7 @@ function ConversationForm() {
                             <div className={classes.halfColumn}>
                                 <div className={classes.field}>
                                     <div className={classes.InputControl}>
-                                        <Button className={classes.buttonStyle} type="submit">Submit</Button>
+                                        <Button className={classes.buttonStyle} type="submit" onClick={PostData}>Submit</Button>
                                     </div>
                                     {error && (
                                         <Typography variant="body1" color="error">
